@@ -1,19 +1,52 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
-    <link>http://example.org/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <title>Ferratauris</title>
+    <link>https://www.ferratauris.com/</link>
+    <description>Recent content on Ferratauris</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 17 Nov 2021 21:50:00 +0200</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 17 Nov 2021 21:50:00 +0200</lastBuildDate><atom:link href="https://www.ferratauris.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo and Netlify</title>
+      <link>https://www.ferratauris.com/hugo-and-netlify/</link>
+      <pubDate>Thu, 18 Nov 2021 23:21:48 +0200</pubDate>
+      
+      <guid>https://www.ferratauris.com/hugo-and-netlify/</guid>
+      <description>This is by far my favourite way. The website you are viewing right now is made by using this method.
+Once again, Your website will haveto be registered to be accessable from the public, but that will then be all. No paying GGoogle or Amazon, only the domain name.
+So let&amp;rsquo;s start.
+You can do all of this using terminal, but if you want ease of use, get VS Code or Git desktop.</description>
+    </item>
+    
+    <item>
+      <title>Google Cloud Service, Amazon, Azure and Local</title>
+      <link>https://www.ferratauris.com/google-cloud-service-amazon-azure-and-local/</link>
+      <pubDate>Thu, 18 Nov 2021 23:07:39 +0200</pubDate>
+      
+      <guid>https://www.ferratauris.com/google-cloud-service-amazon-azure-and-local/</guid>
+      <description>The second way of creating a website is a tad more complicated and alot more involved. The cost is minimal. (It cost me to host mine on Google) You will also haveto register a domain name if you want the website to be publically accessable. The good thing is, These services can also be used for other purposes like hosting your own VPN or even a game server. The possibilities are endless.</description>
+    </item>
+    
+    <item>
+      <title>000webhosting</title>
+      <link>https://www.ferratauris.com/000webhosting/</link>
+      <pubDate>Thu, 18 Nov 2021 23:02:40 +0200</pubDate>
+      
+      <guid>https://www.ferratauris.com/000webhosting/</guid>
+      <description>The first and easiest way to make a website is also free. All you haveto do, is navigate to https://www.000webhost.com/ Once you are there: Create an account or login if you already have one.</description>
+    </item>
+    
     <item>
       <title>Hello World</title>
-      <link>http://example.org/post/hello-world/</link>
+      <link>https://www.ferratauris.com/post/hello-world/</link>
       <pubDate>Wed, 17 Nov 2021 21:50:00 +0200</pubDate>
       
-      <guid>http://example.org/post/hello-world/</guid>
-      <description></description>
+      <guid>https://www.ferratauris.com/post/hello-world/</guid>
+      <description>Yes! Hello world. Hello and welcome! This is my new website, glad you could make it.
+What is this all about? Well. This will be a platform of free education.
+Want your own website? Let&amp;rsquo;s build one or 2 or even 5 together. Need an IT qualification? I can help. I won&amp;rsquo;t give you one, but I can show you anything you need to know.
+Want to game on Linux? I have been.</description>
     </item>
     
   </channel>
