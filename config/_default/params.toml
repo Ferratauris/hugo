@@ -6,7 +6,7 @@ custom_css = ["scss/custom.scss"] # custom_css = ["scss/custom.scss"] and then m
 custom_js = [] # custom_js = ["js/custom.js"] and then make file at root/assets/js/custom.js
 useFaviconGenerator = true # https://www.favicon-generator.org/
 meta_image = ""
-themecolor = ""
+themecolor = "dark"
 
 themeOptions = ["light", "dark", "hacker", "solarized", "kimbie"] # select options for site color theme
 notAllowedTypesInHome = ["contact", "talks", "about", "showcase", "page"] # not allowed page types in home page. type can be set in front matter or default to folder name.
@@ -93,7 +93,7 @@ showPoweredBy = true # show footer text: Powered by Hugo and Zzo theme
 showFeedLinks = false # RSS Feed 
 showSocialLinks = true # email, facebook, twitter ...
 enableLangChange = false # show button at bottom left of footer.
-enableThemeChange = false # site color theme
+enableThemeChange = true # site color theme
 
 # service
 googleTagManager = "" # GTM-XXXXXX

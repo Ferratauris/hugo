@@ -1,7 +1,16 @@
 ---
-title: "000webhosting"
-date: 2021-11-18T23:02:40+02:00
+author: "Ferratuaris"
+title: "000Webhosting"
+date: 2019-12-16T12:00:06+09:00
+description: "A free web hosing platform for students"
 draft: false
+hideToc: false
+enableToc: true
+enableTocContent: false
+author: Ferratauris
+authorEmoji: 👻
+tags: 
+- webhosting
 ---
 
 The first and easiest way to make a website is also free. 
