@@ -13,7 +13,7 @@
 
 [[main]]
     name = "Web Development"
-    url = "/posts/tests/"
+    url = "/categories/web-development"
     parent = "Sections"
 
 [[main]]
@@ -24,19 +24,19 @@
 
 [[main]]
     name = "Github"
-    url = ""
+    url = "https://github.com/Ferratauris"
     hrefTargetBlank = true
     parent = "Social"
 
 [[main]]
     name = "Twitch"
-    url = ""
+    url = "https://www.twitch.tv/ferratauris"
     hrefTargetBlank = true
     parent = "Social"
 
 [[main]]
     name = "Twitter"
-    url = ""
+    url = "https://twitter.com/Ferratauris"
     hrefTargetBlank = true
     parent = "Social"
 
@@ -47,7 +47,7 @@
     weight = 6
     
 [[main]]
-    name = ""
-    url = ""
+    name = "The Business"
+    url = "https://www.youtube.com/channel/UCPcgkQFpd_pEIwScIZpZeAQ"
     hrefTargetBlank = true
     parent = "YouTube Channels"
