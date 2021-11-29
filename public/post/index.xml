@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Ferratauris</title>
+    <link>https://www.ferratauris.com/post/</link>
+    <description>Recent content in Posts on Ferratauris</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 17 Nov 2021 21:50:00 +0200</lastBuildDate><atom:link href="https://www.ferratauris.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello World</title>
+      <link>https://www.ferratauris.com/post/hello-world/</link>
+      <pubDate>Wed, 17 Nov 2021 21:50:00 +0200</pubDate>
+      
+      <guid>https://www.ferratauris.com/post/hello-world/</guid>
+      <description>Yes! Hello world. Hello and welcome! This is my new website, glad you could make it.
+What is this all about? Well. This will be a platform of free education.
+Want your own website? Let&amp;rsquo;s build one or 2 or even 5 together. Need an IT qualification? I can help. I won&amp;rsquo;t give you one, but I can show you anything you need to know.
+Want to game on Linux? I have been.</description>
+    </item>
+    
+  </channel>
+</rss>
