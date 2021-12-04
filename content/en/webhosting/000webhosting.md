@@ -15,6 +15,8 @@ libraries:
 
 ---
 
+## first time setup
+
 The first and easiest way to make a website is also free. All you have to do, is navigate to https://www.000webhost.com/ 
 Once you are there: Create an account or login if you already have one.
 
@@ -36,8 +38,10 @@ On the next page, choose a website name.
 I will be choosing mylinuxblog
 I found the proccess to be alot easier if you let 000webhost generate a password
 
-DO NOT EVER LOOSE YOUR PASSWORD! NEVER LOSE ANY LOGIN DETAILS!
-BACKUPS ARE IMPORTANT!
+## DO NOT EVER LOOSE YOUR PASSWORD! NEVER LOSE ANY LOGIN DETAILS!
+## BACKUPS ARE IMPORTANT!
+
+## Installing Wordpress
 
 You will be faced with an option menu where you may pick:
 
@@ -66,6 +70,8 @@ After batteling with the interface to give you access for enough time, You will 
 
 I would advise playing around here. Go explore. See what you can do. If you want to follow a strict guide, you may stick around and see how I prefer to dp things.
 
+## Choosing Plugins
+
 Firstly, click on plugins then installed plugins.
 
 I like to taylor my experience. So I will remove all of them in stalled plugins.
@@ -77,12 +83,12 @@ Hit the Apply button. We do the same to delete all plugins.
 Click on the Bulk actions dropdown menu and pick Delete.
 Hit the Apply button.
 
-Now we install our own plugins.
+## Now we install our own plugins.
 
 On the left side, click Add New
 On the right side, we can search for plugins.
 
-The first one will be Classic editior. I don't know why, but everytime I try to write a new post, It never gets saved.
+The first one will be Classic editor. I don't know why, but every time I try to write a new post, It never gets saved.
 I have found Classic Editor helps with that.
 So just click install now. It will install Classic Editor.
 This can be activated after installation is done, by clicking on Activate.
@@ -111,6 +117,8 @@ Go to settings to change how plugins will behave.
 
 This is all I will tell you about plugins. Go wild and make it your own. 
 
+## Beautification
+
 Next I want to make my site look pretty
 So I will go to Appearance on the left and click on themes.
 Here, you will see a lot of different themes. I however, would and terrible at making things look pretty (I am one ugly ferret). So scroll to the bottom and pick. Add New.
@@ -136,4 +144,4 @@ Choose edit with Elementor and start customizing things to your liking.
 
 That is all you need to know! 
 
-Now go and make your first free website.
+## Now go and make your first free website.
