@@ -15,7 +15,7 @@ libraries:
 
 ---
 
-### first time setup
+## First time setup
 
 The first and easiest way to make a website is also free. All you have to do, is navigate to https://www.000webhost.com/ 
 Once you are there: Create an account or login if you already have one.
@@ -41,7 +41,7 @@ I found the proccess to be alot easier if you let 000webhost generate a password
 ## DO NOT EVER LOOSE YOUR PASSWORD! NEVER LOSE ANY LOGIN DETAILS!
 ## BACKUPS ARE IMPORTANT!
 
-## Installing Wordpress
+### Installing Wordpress
 
 You will be faced with an option menu where you may pick:
 
@@ -70,7 +70,7 @@ After batteling with the interface to give you access for enough time, You will 
 
 I would advise playing around here. Go explore. See what you can do. If you want to follow a strict guide, you may stick around and see how I prefer to dp things.
 
-## Choosing Plugins
+### Choosing Plugins
 
 Firstly, click on plugins then installed plugins.
 
@@ -83,7 +83,7 @@ Hit the Apply button. We do the same to delete all plugins.
 Click on the Bulk actions dropdown menu and pick Delete.
 Hit the Apply button.
 
-## Now we install our own plugins.
+### Now we install our own plugins.
 
 On the left side, click Add New
 On the right side, we can search for plugins.
@@ -117,7 +117,7 @@ Go to settings to change how plugins will behave.
 
 This is all I will tell you about plugins. Go wild and make it your own. 
 
-## Beautification
+### Beautification
 
 Next I want to make my site look pretty
 So I will go to Appearance on the left and click on themes.
