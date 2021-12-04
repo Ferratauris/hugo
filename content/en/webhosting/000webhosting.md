@@ -56,3 +56,8 @@ After it is done, You can click on "Go to configuration page"
 This will take ypu to the login page for your wordpress.
 The wordpress username and password should be used here
 
+I don't know if it's a glitch or something, 
+but when I try too change the username and password,
+I can never seem to be able to get into the admin page of Wordpress.
+It just never recognises my username or password.
+So just leave it default to avoid headache
