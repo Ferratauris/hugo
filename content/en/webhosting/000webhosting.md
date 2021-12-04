@@ -15,7 +15,7 @@ libraries:
 
 ---
 
-## first time setup
+### first time setup
 
 The first and easiest way to make a website is also free. All you have to do, is navigate to https://www.000webhost.com/ 
 Once you are there: Create an account or login if you already have one.
