@@ -23,6 +23,6 @@ Want your own website? Let’s build one or 2 or even 5 together. Need an IT qua
 
 Want to game on Linux? I have been. For a long time.
 
-In short. I am an IT fanatic. I might not have any qualifications but I have years of hands on experience.
+In short. I am an IT fanatic. I might not have any qualifications, but I have years of hands-on experience.
 
 On this website I will flex my skill, and I will give you the muscle to flex too.
