@@ -30,7 +30,7 @@ First, we need to install Hugo.
 This can be different depending on your system
 Having Linux or Mac OS would make this alot easier for you
 
-## Hogo on Linux
+## Hugo on Linux
 
 This is the easiest way to use Hugo.
 
