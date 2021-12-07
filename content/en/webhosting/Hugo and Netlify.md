@@ -21,8 +21,33 @@ Once again, Your website will haveto be registered to be accessible from the pub
 
 So let’s start.
 
-You can do all of this using terminal, but if you want ease of use, get VS Code or Git desktop. This will make your life a little easier.
+You can do all of this using a terminal, but if you want ease of use, get VS Code or Git desktop. This will make your life a little easier.
 
-Most of the laid out here is also available on the Hugo website. Please go have a look.
+Most of the content laid out here is also available on the Hugo website. Please go have a look.
 
 First, we need to install Hugo.
+
+This can be different depending on your system
+Having Linux or Mac OS would make this alot easier for you
+
+## Hogo on Linux
+
+This is the easiest way to use Hugo.
+
+Just open your terminal and type (Package-manager)(install) hugo
+
+### On Debian derivitaves
+
+                sudo apt install hugo vscode
+
+### On Red hat derivatives
+
+                sudo yum install hugo vscode
+
+### On Arch derivitaves
+
+                Sudo pacman -S hugo vscode
+
+### On Suse derivatives
+
+                Sudo zypper install hugo vscode

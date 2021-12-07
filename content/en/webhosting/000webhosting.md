@@ -55,7 +55,7 @@ and to have more control, we are going to pick Install Wordpress
 Once again you will be prompted to create a username and password.
 I found it easier to just leave it all default.
 
-Now Wordpress should be installing. this shouldn't take too long
+Now WordPress should be installing. this shouldn't take too long
 After it is done, You can click on "Go to configuration page"
 This will take ypu to the login page for your wordpress.
 The wordpress username and password should be used here
