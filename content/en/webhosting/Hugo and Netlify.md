@@ -46,8 +46,8 @@ sudo yum install hugo vscode
 
 ### On Arch derivitaves
 
-Sudo pacman -S hugo vscode
+sudo pacman -S hugo vscode
 
 ### On Suse derivatives
 
-Sudo zypper install hugo vscode
+sudo zypper install hugo vscode
