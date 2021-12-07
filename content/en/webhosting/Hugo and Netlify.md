@@ -38,16 +38,16 @@ Just open your terminal and type (Package-manager)(install) hugo
 
 ### On Debian derivitaves
 
-sudo apt install hugo vscode
+                sudo apt install hugo vscode
 
 ### On Red hat derivatives
 
-sudo yum install hugo vscode
+                sudo yum install hugo vscode
 
 ### On Arch derivitaves
 
-sudo pacman -S hugo vscode
+                sudo pacman -S hugo vscode
 
 ### On Suse derivatives
 
-sudo zypper install hugo vscode
+                sudo zypper install hugo vscode
