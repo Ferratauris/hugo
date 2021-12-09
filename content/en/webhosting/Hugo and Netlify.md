@@ -96,9 +96,9 @@ We need to ensure Get-ExecutionPolicy is not restricted
 
 If it returns
 
-'''
+```
 Restricted
-'''
+```
 
 Run
 
