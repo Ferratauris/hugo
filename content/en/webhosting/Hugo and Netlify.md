@@ -214,8 +214,8 @@ code .
 This will open VSCode right in the current folder/Directory
 
 To make things easier on yourself, navigate to the website folder in your file explorer and copy the content from
- /<website-name>/<themes>/<theme-name>/exampleSite to
- /<website-name>
+ /(website-name)/(themes)/(theme-name)/exampleSite to
+ /(website-name)
 
  Then back in the terminal, type "hugo serve"
 
