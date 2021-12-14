@@ -17,6 +17,11 @@
     parent = "Sections"
 
 [[main]]
+    name = "Linux"
+    url = "/Linux/"
+    parent = "Sections"
+
+[[main]]
     name = "Social"
     post = ""
     pre = "<i class='fa fa-heart'></i>"
