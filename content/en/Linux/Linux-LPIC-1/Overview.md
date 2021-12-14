@@ -15,7 +15,6 @@ libraries:
 
 ---
 
-## Overview
 
 Linux can be overwhelming to anyone who is new to the community
 Where do you go?
