@@ -1,7 +1,7 @@
 ---
-title: "Installing Linux"
+title: "Detecting harware"
 date: 2021-11-29T18:00:06+09:00
-description: "How exactly is Linux Installed?"
+description: "How do I know my hardware is working properly?"
 draft: false
 enableToc: false
 enableTocContent: false
