@@ -1,6 +1,6 @@
 ---
 title: "The Linux Booting process"
-date: 2021-12-16T18:10:06+02:00
+date: 2021-12-16T20:14:06+02:00
 description: "We take a look at how Linux Boots"
 draft: false
 enableToc: false
