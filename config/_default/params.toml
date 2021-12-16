@@ -1,4 +1,4 @@
-logoText = "Ferratauaris" # Logo text that appears in the site navigation bar.
+logoText = "Ferratauris" # Logo text that appears in the site navigation bar.
 logoType = "short" # long, short -> short: squre shape includes logo text, long: rectangle shape not includes logo text
 logo = true # Logo that appears in the site navigation bar.
 description = "This is a platform for others to learn IT."
