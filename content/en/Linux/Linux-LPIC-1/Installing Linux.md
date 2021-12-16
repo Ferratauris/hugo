@@ -1,6 +1,6 @@
 ---
 title: "Installing Linux"
-date: 2021-11-29T18:00:06+09:00
+date: 2021-12-15T18:25:06+02:00
 description: "How exactly is Linux Installed?"
 draft: false
 enableToc: false

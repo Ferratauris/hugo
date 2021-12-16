@@ -1,6 +1,6 @@
 ---
 title: "Linux as a VM"
-date: 2021-11-29T18:00:06+09:00
+date: 2021-12-16T18:10:06+02:00
 description: "We are taking a look at the things we need to know when running Linux as a VM"
 draft: false
 enableToc: false

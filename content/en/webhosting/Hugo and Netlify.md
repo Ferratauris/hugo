@@ -1,6 +1,6 @@
 ---
 title: "Hugo and Netlify"
-date: 2021-11-29T18:00:06+09:00
+date: 2021-12-12T18:44:06+02:00
 description: "For those who find just coding things easier."
 draft: false
 enableToc: false

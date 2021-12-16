@@ -1,6 +1,6 @@
 ---
 title: "Detecting harware"
-date: 2021-11-29T18:00:06+09:00
+date: 2021-12-15T22:42:06+02:00
 description: "How do I know my hardware is working properly?"
 draft: false
 enableToc: false
