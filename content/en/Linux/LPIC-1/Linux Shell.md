@@ -77,66 +77,83 @@ drwxr-xr-x  5 ferret ferret 4.0K Dec  1 22:20 themes
 
 ```
 ls
-
 ```
 (List) Will list content of the present working directory
 For example ls
 
+
+
 ```
 pwd
-
 ```
 (Print Working Directory) Will output your current location within the file system
 For example pwd
 
+
+
+
 ```
 cd
-
 ```
 (Change Directory) Change the directory you are currently located at in the file system
 For example: cd /home
 
+
+
+
 ```
 echo
-
 ```
 (echo) Output your input directly to a specified location (Default location is terminal)
 For example: echo hello
 
+
+
+
 ```
 touch
-
 ```
 (Touch) Create a new file
 for example: touch newfile.txt 
 
+
+
+
 ```
 cp
-
 ```
 (Copy) Copy a file
 For example: cp newfile.txt newfile1.txt
 
+
+
+
 ```
 cat
-
 ```
 (Concatonate) Merge text files together in a single ouput. (Can be used to few the contents of a file when only one filename is given)
 For example: cat newfile.txt
 
+
+
+
 ```
 less
-
 ```
 (Less) Show content of a file one line at a time
 For example: less newfile.txt
 
+
+
+
 ```
 more
-
 ```
 (More) Show content of a file one page at a time
 For example: more newfile.txt
+
+
+
 
 Most shells have a tab autocomplete function. When typing a command, tab can be pressed to let the system gues what the rest of the command os and then autocomplet the command. This is very useful for being more productive.
 
