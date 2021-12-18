@@ -17,14 +17,14 @@ libraries:
 
 ## Where can we find the terminal?
 
-The are a couple of ways to acces the Linux terminal. The first is if you are on a server, it most likely does not have a GUI (Graphical User Interface) installed. The server will boot directly to teminal.
+There are a couple of ways to access the Linux terminal. The first is if you are on a server, it most likely does not have a GUI (Graphical User Interface) installed. The server will boot directly to the terminal.
 The second way is to press the shortcut keys. Ctrl+Alt+T 
 You can also just launch into a tty (TeleType) ctrl+alt+(F2 to F6). Don't go pressing all of them. Either one of these combinations will work.
 To get back to your desktop, press Ctrl+Alt+F7
-You can also just open the aplication menu (Start menu) and then just search for terminal and launch it.
+You can also just open the application menu (Start menu) and then just search for the terminal and launch it.
 
 
-### It is important to note that shell runs in a terminal. We interact with the shell.
+### It is important to note that the shell runs in a terminal. We interact with the shell.
 
 
 The font in terminal can be made larger or smaller using the shortcut keys Ctrl+Shift++ or Ctrl+Shift+-
@@ -35,14 +35,14 @@ When  a program is written for Linux. It is written as a binary that the kernel 
 When we type a command in shell, a program is run from a binary.
 The kernel looks at the instruction set in a binary file and executes the instructions.
 
-A command acan be broken into differnt parts.
+A command acan be broken into different parts.
 * command (The default instruction set)
-* arguement (Changes to the instruction set)
+* argument (Changes to the instruction set)
 
 Examples of these are:
 
-* ls ---> Command. Will list all files/folders that are not hidden in your presend working directory
-* ls -alh ----> Command + Arguement. Will list ALL files including the hidden ones in a LIST format that  shows more information like which permitions the file have, the size of a file, what user and group the file belongs to, when the file was modified and the size and make it HUMAN readable
+* ls ---> Command. Will list all files/folders that are not hidden in your present working directory
+* ls -alh ----> Command + Argument. Will list ALL files including the hidden ones in a LIST format that  shows more information like which permissions the file have, the size of a file, what user and group the file belongs to, when the file was modified and the size and make it HUMAN readable
 
 Below is an example
 
@@ -131,7 +131,7 @@ For example: cp newfile.txt newfile1.txt
 ```
 cat
 ```
-(Concatonate) Merge text files together in a single ouput. (Can be used to few the contents of a file when only one filename is given)
+(Concatenate) Merge text files together in a single output. (Can be used to few the contents of a file when only one filename is given)
 For example: cat newfile.txt
 
 
@@ -155,10 +155,10 @@ For example: more newfile.txt
 
 
 
-Most shells have a tab autocomplete function. When typing a command, tab can be pressed to let the system gues what the rest of the command os and then autocomplet the command. This is very useful for being more productive.
+Most shells have a tab autocomplete function. When typing a command, tab can be pressed to let the system guess what the rest of the command os and then autocomplete the command. This is very useful for being more productive.
 
 ## Conclusion
 
 Get familiar with the terminal. In Linux, it is your best friend. It is there to empower you and it is one of the main reasons users leave windows in favor of Linux.
 Practice the commands. Use them in different ways and explore them.
-The command given here are the basic building blocks.
+The autocomplete given here are the basic building blocks.
