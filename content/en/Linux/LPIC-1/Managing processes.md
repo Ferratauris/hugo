@@ -1,6 +1,6 @@
 ---
 title: "Managing Processes"
-date: 2021-12-18T16:27:06+02:00
+date: 2021-12-19T22:34:06+02:00
 description: "How are Processes managed in Linux?"
 draft: false
 enableToc: false
