@@ -1,5 +1,5 @@
 ---
-title: "Overview"
+title: "1 Overview"
 date: 2021-12-14T22:04:06+02:00
 description: "An overview on what we can expect from the LPIC-1 series"
 draft: false

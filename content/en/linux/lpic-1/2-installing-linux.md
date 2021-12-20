@@ -1,5 +1,5 @@
 ---
-title: "Installing Linux"
+title: "2 Installing Linux"
 date: 2021-12-15T18:25:06+02:00
 description: "How exactly is Linux Installed?"
 draft: false

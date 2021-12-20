@@ -1,5 +1,5 @@
 ---
-title: "GRUB configuration"
+title: "6 GRUB configuration"
 date: 2021-12-17T22:46:06+02:00
 description: "What is GRUB and how can it be modified?"
 draft: false

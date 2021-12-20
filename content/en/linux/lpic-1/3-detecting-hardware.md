@@ -1,5 +1,5 @@
 ---
-title: "Detecting harware"
+title: "3 Detecting harware"
 date: 2021-12-15T22:42:06+02:00
 description: "How do I know my hardware is working properly?"
 draft: false

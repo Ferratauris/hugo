@@ -1,5 +1,5 @@
 ---
-title: "Linux Shell"
+title: "7 Linux Shell"
 date: 2021-12-18T16:27:06+02:00
 description: "Let's explore the Linux CLI (Command Line Interface)"
 draft: false
