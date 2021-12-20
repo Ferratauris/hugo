@@ -1,6 +1,6 @@
 ---
 title: "Process Priorities"
-date: 2021-12-18T16:27:06+02:00
+date: 2021-12-20T22:21:06+02:00
 description: "How are processes prioritized?"
 draft: false
 enableToc: false
