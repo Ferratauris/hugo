@@ -1,6 +1,6 @@
 ---
 title: "10 Nano"
-date: 2021-12-21T20:14:06+02:00
+date: 2021-12-21T21:19:06+02:00
 description: "Nano is a noob friendly text editor"
 draft: false
 enableToc: false
