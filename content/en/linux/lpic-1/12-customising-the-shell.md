@@ -1,6 +1,6 @@
 ---
-title: "11 Customizing the shell"
-date: 2021-12-22T22:34:06+02:00
+title: "12 Customizing the shell"
+date: 2021-12-23T22:32:06+02:00
 description: "We are going to customize the shell to work better for us"
 draft: false
 enableToc: false

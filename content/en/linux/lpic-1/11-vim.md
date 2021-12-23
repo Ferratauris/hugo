@@ -1,5 +1,5 @@
 ---
-title: "10 Vim"
+title: "11 Vim"
 date: 2021-12-22T22:34:06+02:00
 description: "Vim is probably the most powerful text editor you will ever learn"
 draft: false
