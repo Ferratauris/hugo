@@ -1,6 +1,6 @@
 ---
 title: "No more lazing about"
-date: 2021-12-04T18:22:13+02:00
+date: 2021-12-28T22:25:25+02:00
 description: "Time to get off our butts and start working!"
 draft: false
 enableToc: false
