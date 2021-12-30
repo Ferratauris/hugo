@@ -1,0 +1,116 @@
+---
+title: "15 More on data redirection"
+date: 2021-12-29T20:51:06+02:00
+description: "What other ways can data be redirected?"
+draft: false
+enableToc: false
+enableTocContent: false
+tags:
+-
+series:
+-
+categories:
+
+libraries:
+
+---
+
+## Introduction
+
+In the previous article I gave you a command to run.
+Here is that code again.
+
+```
+echo -e "dir1\ndir2\ndir3\ndir3\ndir5" >> names.txt 
+```
+
+I did say that we would get to this type of command in a later article.
+Well, It's later now.
+
+Sometimes we would need to redirect data to a file rather than another command.
+The above command is a great example of this.
+More places where we would use something like this, is to keep records of logs or system performance data.
+And there is alot more that we can do using data redirects.
+
+### standards
+
+When you type a command, Your keyboard is seen as standard input
+The output on your terminal can be split into 2 groups
+
+* Standard out (1) This displays successful commands
+* Standard error (2) This displays errors usually to the terminal aswell.
+ 
+### Redirecting output.
+
+To redirect output to a file or device, we use the ">" symbol
+Let's create a file that contains a list of all the files in our present working directory.
+
+```
+ls -lh > list.txt
+```
+
+Let's see that list
+
+```
+cat list.txt
+```
+
+Now that was cool.
+It is important to note that when you use a single ">"
+The system interperets this as write.
+Redirecting anything else into the same file will overwrite all the data in the file.
+
+But what if we already have data in a file?
+I can use the redirect to keep a record of logs or system performance.
+But if it all keeps getting erased, that is not very useful.
+
+Ok don't panic. We can append to a file by using ">>"
+Lets give that a try
+
+```
+ls -alh ../ >> list.txt
+```
+
+Now we should have a file that lists the contents of the present working directory and then the parent directory.
+
+```
+cat list.txt
+```
+### /dev/null
+
+Now let's find any mp3 files on the system starting from root
+
+```
+find / -name *.mp3
+```
+
+Wow! That was alot of errors. Now you could go ahead and sif through all that output and try to find the mp3 files on the system. But there is an easier way.
+
+Let's just redirect the errors. 
+Ok. But do we really need a text file that contains all the errors from this command?
+No! We will redirect it to /dev/null
+This is a virtual device on your sytem where data goes to die.
+
+```
+find / -name *.mp3 2> /dev/null
+```
+
+Nice! Now we only saw the output that was needed!
+
+### tee
+
+The last thing I want to mention is the tee command.
+This can be used to output to the terminal as well as a file.
+Perhaps we would like to see the data now, but also save it for later use.
+
+Let's find the jpg files on the system and save the results for later use
+
+```
+find / -name *.jpg 2> /dev/null | tee list.txt
+
+## Conclusion
+
+Redirection is a very powerful tool.
+When combined with other commands, we can make alot of work alot easier.
+The pipes and the redirects can be used infinately in a single command to create super compleks commands.
+You are starting to program now. How exciting!
