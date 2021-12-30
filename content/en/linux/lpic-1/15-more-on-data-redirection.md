@@ -1,6 +1,6 @@
 ---
 title: "15 More on data redirection"
-date: 2021-12-29T20:51:06+02:00
+date: 2021-12-30T21:34:06+02:00
 description: "What other ways can data be redirected?"
 draft: false
 enableToc: false
