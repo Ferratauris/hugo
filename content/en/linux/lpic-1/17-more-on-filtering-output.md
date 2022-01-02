@@ -1,6 +1,6 @@
 ---
-title: "16 More on Filtering output"
-date: 2021-12-30T21:34:06+02:00
+title: "17 More on Filtering output"
+date: 2022-01-02T21:26:06+02:00
 description: "So how else can we filter output?"
 draft: false
 enableToc: false

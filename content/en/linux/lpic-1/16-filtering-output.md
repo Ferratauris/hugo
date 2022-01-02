@@ -1,6 +1,6 @@
 ---
 title: "16 Filtering output"
-date: 2021-12-30T21:34:06+02:00
+date: 2022-01-02T21:26:06+02:00
 description: "So how can we filter output?"
 draft: false
 enableToc: false
