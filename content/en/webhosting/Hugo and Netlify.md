@@ -17,7 +17,7 @@ libraries:
 
 This is by far my favorite way. The website you are viewing right now is made by using this method.
 
-Once again, Your website will haveto be registered to be accessible from the public, but that will then be all. No paying Google or Amazon, only the domain name.
+Once again, Your website will have to be registered to be accessible from the public, but that will then be all. No paying Google or Amazon, only the domain name.
 
 So let’s start.
 
@@ -37,7 +37,7 @@ Most of the content laid out here is also available on the Hugo website. Please 
 First, we need to install Hugo.
 
 This can be different depending on your system
-Having Linux or Mac OS would make this alot easier for you
+Having Linux or Mac OS would make this a lot easier for you
 
 ## Hugo on Linux
 
@@ -127,7 +127,7 @@ Ok. Now you do need a Netlify account. So follow the link below
 https://www.netlify.com
 
 You need to sign in or create a Netlify account.
-If you don't have a Netlify account, click on signup, enter your email and choose a password atleast 10 characters long
+If you don't have a Netlify account, click on signup, enter your email and choose a password at least 10 characters long
 Then go to your inbox, click on Verify.
 Now you will be asked to introduce yourself to Netlify.
 You do you on this page. Fill it as you see fit.
@@ -228,7 +228,7 @@ If all is done correctly, You should now see a fully functioning website.
 
 ### All of the themes function differently. Please take a look at the readme for your theme to learn how to configure it.
 
-That was easy enough. But now we need all our friends to access this website aswell
+That was easy enough. But now we need all our friends to access this website as well
 
 ## Create a Github Repository
 

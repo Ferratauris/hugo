@@ -63,6 +63,16 @@ On Debian:
 ```
 sudo apt install open-vm-tools
 ```
+Use man (Manual) to see other ways sudo can be used.
+
+```
+man sudo
+```
+Use man (Manual) to see other ways apt can be used.
+
+```
+man apt
+```
 
 On Redhat:
 
@@ -70,16 +80,46 @@ On Redhat:
 sudo dnf install open-vm-tools
 ```
 
+Use man (Manual) to see other ways dnf can be used.
+
+```
+man dnf
+```
+
 On Arch:
 
 ```
 sudo pacman install open-vm-tools
 ```
+
+Use man (Manual) to see other ways pacman can be used.
+
+```
+man pacman
+```
+Let's break there commands down now.
+First we call sudo (Substitute User Do).
+This allows us to do actions as a system administrator.
+Then we call in the package manager.
+Then we tell the package manager to install a package.
+Then we give the package name.
+
+### Enable Open VM Tools
+
 Then to enable the package and start the service we run:
 
 ```
 sudo systemctl enable --now open-vm-tools
 ```
+Let's break this down.
+Sudo(substitute user do) systemctl (system control) enable (enable) --now (immediately) open-vm-tools (the service we want to start).
+
+Use man (Manual) to see other ways systemctl can be used.
+
+```
+man systemctl
+```
+
 ## Some problems that might come up
 
 Running Linux in a VM rarely presents any problems except for a few small things, the most common one is mentioned now.

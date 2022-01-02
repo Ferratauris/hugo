@@ -26,11 +26,20 @@ To launch nano, simply type "nano" in your terminal
 nano
 ```
 
+Use man (Manual) to see other ways nano can be used.
+
+```
+man nano
+```
+
 You can also specify an existing filename to open that file in nano. Or you can specify a new filename to create a file and open it in nano.
 
 ```
 nano newfile.txt
 ```
+Let's break that down
+
+nano(nano command being called) newfile.txt(newfile.txt gets created and opened in nano)
 
 ## Using nano
 
@@ -66,13 +75,13 @@ The other is to use "Alt+r"
 The "Alt+r" combo works across more keyboard layouts than the "Ctrl+/" combo
 
 After one of these combos are entered, you will be prompted to enter a piece of text to replace.
-Then you will be promted to enter text to replace with.
+Then you will be prompted to enter text to replace with.
 You will then be taken to differnt intances of the text to replace and asked if that instance must be replaced.
 There is also an option to just go ahead and replace all of the intances in the file.
 
 ## Conclusion
 
 You should now be able to open and create files using nano.
-And do some advanced tasks aswell
+And do some advanced tasks as well
 You should also be able to open more than one file.
 You should also be able to search and replace text.

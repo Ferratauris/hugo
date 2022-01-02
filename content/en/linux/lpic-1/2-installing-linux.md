@@ -93,9 +93,9 @@ For LPIC-1 We will focus on Ubuntu and CentOS
 ### The first thing I need you to understand is that Linux is Linux. Everything that works for one will most likely work for all of them.
 
 A Distro is just Linux with a few handy programs installed. You are free to mix and match
-You don't need to have Kali Linux to be able to do penetration testing. You only need to install the programs on the Distro of your choice. Everything in Linux is cusomisable
+You don't need to have Kali Linux to be able to do penetration testing. You only need to install the programs on the Distro of your choice. Everything in Linux is customisable
 
-Please also take note that the biggest difference between Distro families are the way software is installed. Apt does not work on Arch and Zypper will not work in Ubuntu.
+Please also take note that the biggest difference between Distro families is the way software is installed. Apt does not work on Arch and Zypper will not work on Ubuntu.
 This is the only major difference between Distro families
 
 ### Ubuntu
@@ -123,7 +123,7 @@ Click on Download
 
 Once again, we will have more than one version aimed at the different use cases
 
-(The fedora website has a media writer that will create a bootable USB for you. It has a windoes and a Mac version)
+(The fedora website has a media writer that will create a bootable USB for you. It has a windows and a Mac version)
 
 Follow the link below to get the Fedora Media Writer
 
@@ -145,19 +145,19 @@ Remember to set up your BIOS to boot from your new USB key if you are planning o
 Insert your USB key and set your BIOS to boot from it
 We are going to use Ubuntu as an example as most installs are very much the same
 Your Ubuntu install will allow you to either try Ubuntu or Install Ubuntu
-Try will boot up into a desktop envirnoment with software ready to go. It is essentially a fully functioning OS from your USB. (I say fully functional but remember, this is running from a USB so no drivers will be installed and your system might not work to it's full potential)
+Try will boot up into a desktop environment with software ready to go. It is essentially a fully functioning OS from your USB. (I say fully functional but remember, this is running from a USB so no drivers will be installed and your system might not work to its full potential)
 
 The install is pretty standard. A few settings will be presented like
 * Keyboard layout. (Do you use qwerty or dvorak? is this a US or a UK layout)
 * Updates and other software (Here options like what apps you want, what drivers you want and how you want your updates are set)
-* Installation Type. ( Here you can either erase the entire disk to install Linux or customize your partition layout. IGNORE DUALBOOT)
+* Installation Type. ( Here you can either erase the entire disk to install Linux or customize your partition layout. IGNORE DUAL BOOT)
 * You will be warned before the install starts that you are about to lose all the data on your storage device
 * Where are you? (Linux is not tracking you. It would just like to set up your timezone correctly)
 * Who are you(Here you can create your username and password)
 
 Ubuntu should now be installed and your PC can be restarted to boot off of the hard drive where Ubuntu is now installed
 
-After installing an OS, it is wise to run updated as USBs go out if date fairly quickly
+After installing an OS, it is wise to run updates as USBs go out of date fairly quickly
 Then identify any hardware that was not detected and installed automatically by the system and find and install the necessary drivers.
 
 ## Conclusion

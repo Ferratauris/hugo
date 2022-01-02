@@ -32,10 +32,10 @@ The font in terminal can be made larger or smaller using the shortcut keys Ctrl+
 ## How does execution work?
 
 When  a program is written for Linux. It is written as a binary that the kernel can understand.
-When we type a command in shell, a program is run from a binary.
+When we type a command in a shell, a program is run from a binary.
 The kernel looks at the instruction set in a binary file and executes the instructions.
 
-A command acan be broken into different parts.
+A command a can be broken into different parts.
 * command (The default instruction set)
 * argument (Changes to the instruction set)
 
@@ -81,6 +81,11 @@ ls
 (List) Will list content of the present working directory
 For example ls
 
+Use man (Manual) to see other ways ls can be used.
+
+```
+man ls
+```
 
 
 ```
@@ -89,17 +94,18 @@ pwd
 (Print Working Directory) Will output your current location within the file system
 For example pwd
 
+Use man (Manual) to see other ways pwd can be used.
 
-
+```
+man pwd
+```
 
 ```
 cd
 ```
+
 (Change Directory) Change the directory you are currently located at in the file system
 For example: cd /home
-
-
-
 
 ```
 echo
@@ -107,8 +113,11 @@ echo
 (echo) Output your input directly to a specified location (Default location is terminal)
 For example: echo hello
 
+Use man (Manual) to see other ways echo can be used.
 
-
+```
+man echo
+```
 
 ```
 touch
@@ -116,8 +125,11 @@ touch
 (Touch) Create a new file
 for example: touch newfile.txt 
 
+Use man (Manual) to see other ways touch can be used.
 
-
+```
+man touch
+```
 
 ```
 cp
@@ -125,8 +137,11 @@ cp
 (Copy) Copy a file
 For example: cp newfile.txt newfile1.txt
 
+Use man (Manual) to see other ways cp can be used.
 
-
+```
+man cp
+```
 
 ```
 cat
@@ -134,8 +149,11 @@ cat
 (Concatenate) Merge text files together in a single output. (Can be used to few the contents of a file when only one filename is given)
 For example: cat newfile.txt
 
+Use man (Manual) to see other ways cat can be used.
 
-
+```
+man cat
+```
 
 ```
 less
@@ -143,8 +161,11 @@ less
 (Less) Show content of a file one line at a time
 For example: less newfile.txt
 
+Use man (Manual) to see other ways less can be used.
 
-
+```
+man less
+```
 
 ```
 more
@@ -152,10 +173,13 @@ more
 (More) Show content of a file one page at a time
 For example: more newfile.txt
 
+Use man (Manual) to see other ways more can be used.
 
+```
+man more
+```
 
-
-Most shells have a tab autocomplete function. When typing a command, tab can be pressed to let the system guess what the rest of the command os and then autocomplete the command. This is very useful for being more productive.
+Most shells have a tab autocomplete function. When typing a command, tab can be pressed to let the system guess what the rest of the command is and then autocomplete the command. This is very useful for being more productive.
 
 ## Conclusion
 

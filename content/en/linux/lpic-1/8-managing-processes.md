@@ -25,6 +25,12 @@ To see the Processes, the ps(Process Show) command is used
 ps
 ```
 
+Use man (Manual) to see other ways ps can be used.
+
+```
+man ps
+```
+
 Below is an example:
 
 ```
@@ -44,7 +50,7 @@ Below is an example:
 As you can see, This is not very useful at all. This command without any arguments, will show all the processes currently running in that specific shell. Which is not alot.
 This is why we would give the ps command alot more to work with.
 
-The first we look at, is ps-a(Shows all of the current user's processes)
+First we look at, is ps-a(Shows all of the current user's processes)
 
 ```
 ░▒▓    ~/b/w/hugo    master ?1  ps -a                ✔  21:47:04  ▓▒░
@@ -79,6 +85,12 @@ Looking for the zsh process
 pgrep zsh
 ```
 
+Use man (Manual) to see other ways pgrep can be used.
+
+```
+man pgrep
+```
+
 ```
 ░▒▓    ~/b/w/hugo    master ?1  pgrep zsh            ✔  21:51:01  ▓▒░
 32645
@@ -93,7 +105,7 @@ As you can see, I have a few zsh programs running.
 
 ## top
 
-Now, sofar we have been looking at some useful commands.
+So far we have been looking at some useful commands.
 None of them are as useful as top when we are looking at processes
 Running the top command will give you great information to work with. Like the processes using the most of the resources the system has available. It will show the:
 
@@ -106,11 +118,17 @@ And many more
 top
 ```
 
+Use man (Manual) to see other ways top can be used.
+
+```
+man top
+```
+
 Once again, I urge you to try it.
 
 ## Conclusion
 
-Although ps can be used to see alot of good information, as it stands now, top is way more useful.
+Although ps can be used to see a lot of good information, as it stands now, top is way more useful.
 * ps (Shows processes)
 * top (Shows all information on the process that is using the most of your processing power.)
 

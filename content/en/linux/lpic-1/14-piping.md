@@ -27,7 +27,17 @@ lets run ps -aux again.
 ps -aux
 ```
 
-That is alot of information.
+Let's break that down!
+
+ps(command being called) -a(all)u(users)x(system)
+
+Use man (Manual) to see other ways ps can be used.
+
+```
+man ps
+```
+
+That is a lot of information.
 What if we were looking for a certain process?
 Let's try that again. Only this time, we will pipe the output of ps -aux into another command called grep.
 Grep let's us search for a word in a set of words.
@@ -37,14 +47,28 @@ Let's look for the display manager
 ps -aux | grep bash
 ```
 
-Now thats alot more useful. We can now see who is running bash, and what the process ID is.
+Let's break that down!
+
+ps(process show) -a(all) u(user) x(system) |(pipe output into) grep(search utility) bash(term to search for) 
+
+Now that's a lot more useful. We can now see who is running bash, and what the process ID is.
 
 Another common way to use the pipe is to pipe dmesg into the less command.
 dmesg is the system log for all hardware. The dmesg command itself will just dump a bunch of text onto your screen. To make it easier to read, we could run "dmesg | les"
-And as we know, the less command supports vim commands aswell. This means we could search for an entry asell.
+And as we know, the less command supports vim commands as well. This means we could search for an entry asell.
 
 ```
 dmesg | less
+```
+
+Let's break that down!
+
+dmesg(hardware log) |(pipe into) less(call the less command)
+
+Use man (Manual) to see other ways more can be used.
+
+```
+man more
 ```
 
 ## xargs
@@ -56,6 +80,10 @@ For instance, lets create a few directories
 ```
 mkdir dir1 dir2 dir3
 ```
+
+Let's break that down!
+
+mkdir(Make directory) dir1(name of the first new directory) dir2(Name of the 2nd new directory) dir3(name of the 3rd new directory)
 
 That was simple enough. We created 3 folders. So where does piping and xarg fit into this?
 Well. The problem comes when we want to use a file with a list of names to create a bunch of folders.
@@ -71,10 +99,24 @@ Run the following command to create this file. (It will echo dir1 dir2 dir3 dir4
 echo -e "dir1\ndir2\ndir3\ndir3\ndir5" >> names.txt 
 ```
 
+Let's break that down!
+
+echo(call the echo command) -e(enable interpretation of backslash escapes) "dir1\ndir2\ndir3\ndir3\ndir5"(text to echo, new lines are indicated as /n) >>(append output to) names.txt(name of file to append to) 
+
 Ok now we can cat the content of names.txt and pipe this into mkdir soo mkdir can create all the directories listed in the file. But to make this command work, we will need to use xargs
 
 ```
 cat names.txt | xargs mkdir
+```
+
+Let's break that down!
+
+cat(call concatenate command) names.txt(name of file to call the cat command on) |(pipe) xargs(build and execute command lines from standard input) mkdir(call make directory command)
+
+Use man (Manual) to see other ways more can be used.
+
+```
+man more
 ```
 
 And there you have it. All the directories have been created and it took almost no effort from us.

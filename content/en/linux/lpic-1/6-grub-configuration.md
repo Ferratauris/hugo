@@ -34,12 +34,19 @@ For me, I would run this command in shell
 ```
 sudo code /etc/default/grub
 ```
+Let's break that down.
+sudo (substitute user do) code (program to be used) /etc/default/grub (path to file we want to open in the program)
+
 But if you are working on a server with no fancy GUI installed and you need to stay in a terminal to edit settings, you will need to run sudoedit /etc/deafault/grub
 
 ```
 sudoedit /etc/default/grub
 ```
+
+Let's break that down
+sudoedit (substitute user do edit) /etc/default/grub (path to file) 
 An editor will open with some settings that can be changed.
+
 When this file is changed, it will not take immediate effect. 
 The Bootloader is read only and we are not allowed to make changes.
 
@@ -48,13 +55,18 @@ To make changes from the previous file take effect, we need to run the following
 ```
 sudo grub2-mkconfig -o /boot/grub2/grub.cfg
 ```
-(Substitute User Do, GRUB2 make configuration, Output to /boot/grub2/grub.cfg)
+Let's break that down
+sudo (Substitute User Do) grub2-mkconfig (configure grub) -o (Output to a file) /boot/grub2/grub.cfg (file to sent the output to)
 
 In Ubuntu, this is a little easier. Just run
 
 ```
 sudo update-grub2
 ```
+Let's break that down
+
+sudo (super user do) update-grub2 (update grub-2)
+
 ### GRUB service
 
 To get to the location of the GRUB service we need to run this in terminal as root (Administrator)
@@ -62,6 +74,10 @@ To get to the location of the GRUB service we need to run this in terminal as ro
 ```
 cd /etc/grub.d
 ```
+Let's break that down
+
+cd (change directory) /etc/grub.d (directory to change to)
+
 Below is a listing of the files that can be found at this location
 
 ```
@@ -104,6 +120,12 @@ To compile the change you have made run:
 
 sudo grub2-mkconfig -o /boot/grub2/grub.cfg
 
+Let's break that down.
+sudo (super user do) grub2-mkconfig (make new grub configuration) -o (output this) /boot/grub2/grub.cfg (Path to send the output to)
+
 ### On RedHat
 
 sudo update-grub2
+
+Let's break that down.
+sudo (super user do) update-grub2 (update-grub2)

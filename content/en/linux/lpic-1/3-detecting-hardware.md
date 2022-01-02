@@ -31,10 +31,15 @@ To see what hardware has been installed successfully, we can use a few shell com
 ### lspci
 
 The first command that we are going to learn is lspci.
-this is used to list PCI (peripheral connect interface) devices
+this is used to list PCI (peripheral connect interface) devices.
 
 ```
 lspci
+```
+Use man (Manual) to see other ways lspci can be used.
+
+```
+man lspci
 ```
 
 Here is the results if I run lspci
@@ -81,12 +86,18 @@ If you run lspci and your exact hardware does not show up, this does not mean th
 
 ### lsusb
 
-lspci is good for detecting integrated hardware or hardware connected to PCI slots on your motherboard. But other harware might be removable and connected to USB interface.
+lspci is good for detecting integrated hardware or hardware connected to PCI slots on your motherboard. But other hardware might be removable and connected to the USB interface.
 For these, we use lsusb
 
 ```
 lsusb
 ```
+Use man (Manual) to see other ways lsusb can be used.
+
+```
+man lsusb
+```
+
 Below are the results if I run lsusb
 
 ```
@@ -112,11 +123,17 @@ Do not worry if hardware on a laptop is named differently. It could be that your
 
 ## Hardware Names
 
-When a system detects a piece of harware and successfully installs a driver, the harwre will get a name assigned to it. The system uses this name to interact with the hardware. To see al these names, we can run ls /dev/ (List devices)
+When a system detects a piece of hardware and successfully installs a driver, the hardware will get a name assigned to it. The system uses this name to interact with the hardware. To see all these names, we can run ls /dev/ (List devices)
 
 ```
 ls /dev
 ```
+Use man (Manual) to see other ways ls can be used.
+
+```
+man ls
+```
+
 Here is the output is I should run ls /dev
 
 ```
@@ -182,6 +199,12 @@ It might be that your hardware is connected and detected inside or lspci or lsus
 ```
 lsmod
 ```
+Use man (Manual) to see other ways lsmod can be used.
+
+```
+man lsmod
+```
+
 Here is the output if I run lsmod
 
 ```
@@ -309,6 +332,12 @@ In this case, we would use rmmod (Remove Module)
 ```
 rmmod
 ```
+Use man (Manual) to see other ways rmmod can be used.
+
+```
+man rmmod
+```
+
 Now first we should go find the module we would want to remove. We could go through the entire list of lsmod to find it or we can have the system do it for us by piping the lsmod into another command. Piping a command just means that we take the output of one command to be the input of another command. This will be explained in greater detail later.
 lsmod | grep bluetooth will look for the word bluetooth inside of the output of the lsmod command and display it
 
@@ -340,6 +369,12 @@ To reload modules, we use modprobe
 
 ```
 modprobe
+```
+
+Use man (Manual) to see other ways modprobe can be used.
+
+```
+man modprobe
 ```
 
 ## Conclusion

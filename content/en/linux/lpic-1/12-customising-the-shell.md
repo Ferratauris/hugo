@@ -44,6 +44,10 @@ From your home folder, type nano .bashrc or if you are a vim user, type vim .bas
 nano .bashrc
 ```
 
+Lets break that down!
+
+nano(call the nano text editor) .bashrc(to open .bashrc)
+
 The first things we'll see, is:
 
 ### History
@@ -104,7 +108,7 @@ If  you then run "cheat tar" it will return the contents of https://cheat.sh/tar
 
 ## Conclusion
 
-This was a hefty article. There was alot to learn and a lot to try to remember
+This was a hefty article. There was a lot to learn and a lot to try to remember
 The most important things to learn here are:
 
 * Where the configuration files for the shell are

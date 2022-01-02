@@ -19,7 +19,7 @@ libraries:
 
 vim is a super powerful text editor. It is a significantly difficult text editor for noobies to use.
 The learning curve is much steeper than nano.
-Most Linux veterans use vim as it supports alot of powerful features like macros.
+Most Linux veterans use vim as it supports a lot of powerful features like macros.
 vim is also designed to only utilize a keyboard even if the entire right side of the keyboard is missing, like if the arrow keys are not there.
 vim allows for programming, code review, syntax highlighting, debugging and testing.
 
@@ -31,11 +31,20 @@ To open vim, simply type vim in your terminal.
 vim
 ```
 
+Use man (Manual) to see other ways vim can be used.
+
+```
+man vim
+```
+
 You can also specify an existing filename to open that file in nano. Or you can specify a new filename to create a file and open it in vim.
 
 ```
 vim newfile.txt
 ```
+let's break that down
+
+vim(call vim command) newfile.txt (open or create and open newfile.txt)
 
 ## Modes of operation
 
@@ -51,7 +60,7 @@ Press : to enter command mode
 
 * h (Move the cursor left)
 * j (Move the cursor down)
-* k (Move the curor up)
+* k (Move the cursor up)
 * l (Move the cursor right)
 * i (Insert mode)
 * w (Write)

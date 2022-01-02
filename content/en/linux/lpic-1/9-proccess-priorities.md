@@ -38,6 +38,16 @@ example:
 ```
 sudo nice -n -15 vivaldi
 ```
+
+Let's break that down
+sudo (substitute user do) nice (call the nice command) -n (set niceness value) -15 (Value to set niceness to)
+
+Use man (Manual) to see other ways nice can be used.
+
+```
+man nice
+```
+
 This will run vivaldi at a higher priority. Now nothing can stand in my way of binging netflix
 
 ### Seeing niceness value
@@ -47,6 +57,12 @@ The easiest way o see a niceness value of a process is to run top
 ```
 top
 ```
+Use man (Manual) to see other ways top can be used.
+
+```
+man top
+```
+
 The niceness value will appear in the NI column
 
 
@@ -61,6 +77,15 @@ For that, we use renice (sudo renice {new niceness value}{process ID})
 For example
 ```
 renice 10 5095
+```
+
+Let's break that down!
+renice(call renice command) 10(change niceness value to 10) 5095(of process number 5095)
+
+Use man (Manual) to see other ways renice can be used.
+
+```
+man renice
 ```
 
 ## Killing a process
@@ -79,6 +104,10 @@ Below is an example of killing off a random process. DO NOT RUN THIS COMMAND ON 
 ```
 kill -9 5095
 ```
+
+Let's break that down!
+
+Kill (Call the kill command) -9(ose toggle 9 "drop process from the processor) 5095(process to be killed)
 
 
 ## Conclusion

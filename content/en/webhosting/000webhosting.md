@@ -36,16 +36,16 @@ This is all up to you
 
 On the next page, choose a website name.
 I will be choosing mylinuxblog
-I found the proccess to be alot easier if you let 000webhost generate a password
+I found the process to be alot easier if you let 000webhost generate a password
 
-## DO NOT EVER LOOSE YOUR PASSWORD! NEVER LOSE ANY LOGIN DETAILS!
+## DO NOT EVER LOSE YOUR PASSWORD! NEVER LOSE ANY LOGIN DETAILS!
 ## BACKUPS ARE IMPORTANT!
 
 ### Installing Wordpress
 
 You will be faced with an option menu where you may pick:
 
-* Use Our Wesite Builder
+* Use Our Website Builder
 * Install Wordpress
 * upload Your Site
 
@@ -55,28 +55,28 @@ and to have more control, we are going to pick Install Wordpress
 Once again you will be prompted to create a username and password.
 I found it easier to just leave it all default.
 
-Now WordPress should be installing. this shouldn't take too long
+Now WordPress should be installed. This shouldn't take too long
 After it is done, You can click on "Go to configuration page"
-This will take ypu to the login page for your wordpress.
+This will take you to the login page for your wordpress.
 The wordpress username and password should be used here
 
 I don't know if it's a glitch or something, 
 but when I try to change the username and password,
-I can never seem to be able to get into the admin page of Wordpress.
+I never seem to be able to get into the admin page of Wordpress.
 It just never recognises my username or password.
 So just leave it default to avoid headache
 
-After batteling with the interface to give you access for enough time, You will finally be greated with an awesome website managing page with many features.
+After battling with the interface to give you access for enough time, You will finally be greeted with an awesome website managing page with many features.
 
-I would advise playing around here. Go explore. See what you can do. If you want to follow a strict guide, you may stick around and see how I prefer to dp things.
+I would advise playing around here. Go explore. See what you can do. If you want to follow a strict guide, you may stick around and see how I prefer to do things.
 
 ### Choosing Plugins
 
 Firstly, click on plugins then installed plugins.
 
-I like to taylor my experience. So I will remove all of them in stalled plugins.
+I like to tailor my experience. So I will remove all of them in stalled plugins.
 
-First they must all be deactivated. The quickesst way of doing this, is to click the select all checkbox at the top.
+First they must all be deactivated. The quickest way of doing this, is to click the select all checkbox at the top.
 
 Click on the Bulk actions dropdown menu and pick Deactivate.
 Hit the Apply button. We do the same to delete all plugins.
@@ -95,7 +95,7 @@ This can be activated after installation is done, by clicking on Activate.
 
 Here is a list and explanation of plugins That I would install
 
-* bb Press: It allows for a forum like setup. This is great for having people interact with each other on the website and great for research on what you should do next.
+* bb Press: It allows for a forum-like setup. This is great for having people interact with each other on the website and great for research on what you should do next.
 
 * All-in-One WP Migration: This is awesome for backing up your website or uploading to a new webhost if you want to leave your current webhost.
 
@@ -121,11 +121,11 @@ This is all I will tell you about plugins. Go wild and make it your own.
 
 Next I want to make my site look pretty
 So I will go to Appearance on the left and click on themes.
-Here, you will see a lot of different themes. I however, would and terrible at making things look pretty (I am one ugly ferret). So scroll to the bottom and pick. Add New.
+Here, you will see a lot of different themes. I however, would be terrible at making things look pretty (I am one ugly ferret). So scroll to the bottom and pick. Add New.
 
-The theme that I will search for, is Astra. Click install and then activate.
+The theme that I will search for is Astra. Click install and then activate.
 
-Now under Appearance, a new menu had appeared called Starter Templates. This will be our next destination.
+Now under Appearance, a new menu has appeared called Starter Templates. This will be our next destination.
 Click on it. A Select page builder prompt will appear.
 I will pick Elementor. After that, Templates will appear. Pick anyone you want. Then at the bottom, choose Import complete site.
 
