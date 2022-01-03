@@ -1,6 +1,6 @@
 ---
 title: "16 Checksums"
-date: 2022-01-02T21:26:06+02:00
+date: 2022-01-03T20:46:06+02:00
 description: "Gow is file integrity determined?"
 draft: false
 enableToc: false
