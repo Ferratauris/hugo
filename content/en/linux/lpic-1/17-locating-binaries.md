@@ -1,6 +1,6 @@
 ---
 title: "17 Locating Binaries"
-date: 2022-01-03T20:46:06+02:00
+date: 2022-01-04T20:37:06+02:00
 description: "Where are the binaries for commands stored?"
 draft: false
 enableToc: false
