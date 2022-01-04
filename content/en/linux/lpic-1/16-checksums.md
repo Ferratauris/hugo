@@ -1,7 +1,7 @@
 ---
 title: "16 Checksums"
 date: 2022-01-03T20:46:06+02:00
-description: "Gow is file integrity determined?"
+description: "how is file integrity determined?"
 draft: false
 enableToc: false
 enableTocContent: false
@@ -51,6 +51,12 @@ shasum -a 256 .bashrc
 Let's break that down!
 shasum(call shasum checksum command) -a(algorithm to use will be specified) 256(algorithm to use)
 
+Use man (Manual) to see other ways shasum can be used.
+
+```
+man shasum
+```
+
 ### Verify a file using checksum
 
 To verify a file's integritty, the same checksum and algorithm should be used as the one that was used to create the check.
@@ -66,6 +72,12 @@ shasum -a 256 -c .bashrc
 Let's break that down!
 
 shasum(call shasum checksum command) -a(algorithm to use will be specified) 256(algorithm to use) -c(check) .bashrc(file to check)
+
+Use man (Manual) to see other ways shasum can be used.
+
+```
+man shasum
+```
 
 ## Conclusion
 
