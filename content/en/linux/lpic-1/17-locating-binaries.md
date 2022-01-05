@@ -1,6 +1,6 @@
 ---
 title: "17 Locating files or binaries"
-date: 2022-01-04T20:37:06+02:00
+date: 2022-01-05T20:48:06+02:00
 description: "How do we search for things in the linux command line?"
 draft: false
 enableToc: false
