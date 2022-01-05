@@ -1,7 +1,7 @@
 ---
-title: "17 Locating Binaries"
+title: "17 Locating files or binaries"
 date: 2022-01-04T20:37:06+02:00
-description: "Where are the binaries for commands stored?"
+description: "How do we search for things in the linux command line?"
 draft: false
 enableToc: false
 enableTocContent: false
@@ -61,6 +61,81 @@ Use man (Manual) to see other ways which can be used.
 man which
 ```
 
+## Find
+
+Find is the end all be all of trying to locate a file or binary.
+Find is case sensitive.
+It is however important to note that the syntax of find is a little different to what one is used to.
+
+### Search by name
+
+For example:
+
+```
+find / -name bashrc 2> /dev/null
+```
+
+Let's break that down.
+
+find(call the find command) /(location we want to search through, in this case, the root of the file system) -name(the name of the file will be specified) bashrc(the name of the file we are trying to find) 2(Errors) >(redirect output) /dev/null(A location that doesn't physically exist)
+
+Use man (Manual) to see other ways find can be used.
+
+```
+man find
+```
+
+Notice how the syntax is -name. In normal unix syntax, each of those letters would have been a toggle.
+With find, the entire word is the toggle.
+Make a note of this!
+
+### Search by file size
+
+Finding files according to their size is also very useful
+
+Below is an example:
+
+```
+find / -size 20M 2> /dev/null
+```
+
+Let's break that down.
+
+find(call the find command) /(location we want to search through, in this case, the root of the file system) -size(The size of the file will be specified) 20(The numeric value of the size of the file) M(Megabytes) 2(Errors) >(redirect output) /dev/null(A location that doesn't physically exist)
+
+Use man (Manual) to see other ways find can be used.
+
+```
+man find
+```
+
+To find files that are bigger than a certain size, the + is used.
+For smaller than a certain size, the - is used.
+Bytes ares depicted as c
+kilobytes are depicted as k
+Megabytes are depicted as M (Notice the M is capitol)
+
+Below is an example of finding a file that is bigger than a certain amount of kilobytes.
+The same syntax can be used for different file sizes higher or lower.
+
+```
+find / -size +2000k 2> /dev/null
+```
+
+Let's break that down.
+
+find(call the find command) /(location we want to search through, in this case, the root of the file system) -size(The size of the file will be specified) +(bigger than) 2000(The numeric value of the size of the file) k(kilobytes) 2(Errors) >(redirect output) /dev/null(A location that doesn't physically exist)
+
+Use man (Manual) to see other ways find can be used.
+
+```
+man find
+```
+
+
 ## Conclusion
 
-You should now be able to find binaries in your path using which and whereis
+You should now be able to find binaries in your path using which and whereis.
+You should also be able to find files using the file command.
+Please go check the manual. There are use cases I haven't mentioned for find.
+Like searching according to permissions.
