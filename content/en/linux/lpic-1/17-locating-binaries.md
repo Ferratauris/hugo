@@ -132,6 +132,30 @@ Use man (Manual) to see other ways find can be used.
 man find
 ```
 
+## Grep
+
+Grep is a command that instead of searching the name of a file, it searches the content of a file.
+In this instance, we will be looking at grep -r to recursively search the contents of a file.
+By default, grep is case sensitive, however, one can change that behavior.
+Another useful way to use grep, is to only show the filenames. 
+Grep by default shows the line in the file where a word was found.
+
+
+Here is an example
+
+```
+grep -ril "alias" ~/
+```
+
+Let's break that down!
+
+grep(call the grep search command) -r(recursive) i(case insensitive) l(list filenames only) "alias"(what to search for) ~/(Home directory)
+
+Use man (Manual) to see other ways grep can be used.
+
+```
+man grep
+```
 
 ## Conclusion
 
@@ -139,3 +163,4 @@ You should now be able to find binaries in your path using which and whereis.
 You should also be able to find files using the file command.
 Please go check the manual. There are use cases I haven't mentioned for find.
 Like searching according to permissions.
+grep can be used to search the contents of files. we can add toggles like r and i to have the search  run case insensitively or recursively
