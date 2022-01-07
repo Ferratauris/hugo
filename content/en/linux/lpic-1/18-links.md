@@ -1,6 +1,6 @@
 ---
 title: "18 Links"
-date: 2022-01-05T20:48:06+02:00
+date: 2022-01-07T20:10:06+02:00
 description: "How can we reference a location on a filesystem?"
 draft: false
 enableToc: false
