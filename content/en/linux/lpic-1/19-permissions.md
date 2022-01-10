@@ -1,6 +1,6 @@
 ---
 title: "18 Permissions"
-date: 2022-01-07T20:10:06+02:00
+date: 2022-01-11T00:07:07+02:00
 description: "Who is allowed to do what on the system?"
 draft: false
 enableToc: false
