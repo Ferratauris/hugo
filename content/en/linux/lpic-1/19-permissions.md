@@ -142,7 +142,7 @@ mkdir(make directory) newdir1(nme of new directory)
 Use man (Manual) to see other ways mkdir can be used.
 
 ```
-man nkdir
+man mkdir
 ```
 
 
@@ -181,6 +181,142 @@ man chown
 You should now see the s attribute when your run ls-l
 
 Now any folder created in this directory will have the testuser group attaches to it.
+
+## File permissions
+
+During the course of reading through all this material, you have probably run ls -l a hundred times.
+You probably have seen a hundred times that man can be used to see the manual of a certain command.
+You have probably seen the characters in the far left of every file once this command is run.
+Those characters start with one of them denominating the type of file.
+After that, we get a cluster of read write execute 3 times
+rwxrwxrwx
+These are the permissions of a file.
+The first rwx is the permissions of the owner of a file.
+the next rwx is the permissions for the group the file belongs to.
+The last rwx is the permissions for everyone else.
+If one of these letters does not show up, that means that that particular permission is not set.
+Below is an example where everyone has full access to read, write and execute a file
+
+rwxrwxrwx
+
+Now let's take a look at how that would look if the owner has read write and execute permissions. The group has read, write and execute permissions and everyone else has no permissions to read or write but may execute a file.
+
+rwxrwx--x
+
+These are the Posix compliant permissions.
+In the posix world, owners of a file are represented by u
+The group a file belongs to is represented by g
+Everyone else is represented by o
+
+### Old style permissions.
+
+In the Unix world before modern Linux, we used to use bits to set permissions.
+This is a little harder for some people to do and you definitely do not need to know any of this.
+I would just like to inform you since I find it easier to do it this way and someone reading this might feel the same.
+
+When the permission bits are set, it is important to remember that each permission has a bit value and they are added up to add or remove permissions.
+
+Below are the values of the different permissions:
+
+* stickybit - 1
+* setgid - 2
+* setuid - 4
+* execute - 1
+* write - 1
+* read - 4
+
+To have a bit set to read and write, we add 4 and 1 to get 5
+When setting permissions in this way, the first bit will be for the owner, the second for the group and the third for everyone else.
+
+To give the owner only permission to read and no permissions to anyone else, it will be represented as 400.
+
+Below is an awesome website where you can calculate these values
+
+http://permissions-calculator.org
+
+I will quote from http://permissions-calculator.org/info/ to explain what some of the terms above mean.
+
+setuid:
+Binary executables with the setuid bit (chmod u+s path) can be executed with the privileges of the file's owner. Due to it's nature it should be used with care.
+
+In octal, the setuid bit is set with 4000 e.g: "chmod 4755 path".
+
+setuid has no effect if the user does not have execute permissions.
+
+setuid is represented with a lower-case "s" in the output of ls. In cases where it has no effect it is represented with an upper-case "S".
+
+setgid:
+Binary executables with the setgid bit (chmod g+s path) can be executed with the privileges of the file's group.
+
+A useful property is to set the setgid bit on a directory so that all files and directories newly created within it inherit the group from that directory.
+
+In octal, the setgid bit is represented by 2000 e.g: "chmod 2755 path".
+
+setgid has no effect if the group does not have execute permissions.
+
+setgid is represented with a lower-case "s" in the output of ls. In cases where it has no effect it is represented with an upper-case "S".
+
+Sticky bit:
+The sticky bit (chmod +t path) was introduced for use with executables as a way of telling an operating system to keep the text segment of the program in swap space after the process had terminated. This was a performance feature designed to make subsequent execution of the program faster.
+
+The sticky bit is more commonly used on directories where it allows the files or directories within to only be moved or deleted by that object's owner, the directory owner, or the super-user.
+
+In octal, the sticky bit is set with 1000 e.g: "chmod 1755 path".
+
+The sticky bit has no effect if others do not have execute permissions.
+
+The sticky bit is represented with a lower-case "t" in the output of ls. In cases where it has no effect it is represented with an upper-case "T".
+
+That was a handful
+
+All of this information as said before is really not all that necessary.
+I only provide it just in case someone out there exists that thinks like me.
+
+## New style permissions
+
+The new way is easier for most people to read. you just remember the previous mentions of owner(u), group(g) and other(o). And read(r), write(w) and execute(x)
+
+To add a permission, we use + to remove a permission, we use - and to overwrite a permission we use =
+
+We are also allowed to add more than one together. specifying ugo will set permissions for the owner group and others.
+Specifying rwx will work with read, write and execute.
+one could even use a comma to separate the different permissions out.
+
+If I wanted to remove the group and other the read permission, I could write it as g-r,o-r
+Or if I want to give read and write to group, I could write it as g+rw
+If I want everyone to have only read and write I can write it as ugo=rw
+
+Below is an example where I will remove the read permission of both group and other.
+But first let's create a file to play with
+
+```
+echo "This is some text" >> newfile.txt
+```
+
+Use man (Manual) to see other ways echo can be used.
+
+```
+man echo
+```
+
+Let's break that down!
+
+echo(sent input text to output) "This is some text"(The input we want sent to the output) >>(redirect and append output to) newfile.txt(Where we want the output redirected and to)
+
+```
+chmod g-r,o-r newfile.txt
+```
+
+Let's break that down!
+
+chmod(change mode of a file) g(group) -(remove) (read permission) ,(more to come) o(other) -(remove) r(read permission) newfile.txt(the file we are changing the mode on)
+
+Use man (Manual) to see other ways chmod can be used.
+
+```
+man chmod
+```
+
 
 ## Conclusion
 
