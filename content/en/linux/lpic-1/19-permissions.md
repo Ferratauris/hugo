@@ -1,15 +1,17 @@
 ---
-title: "18 Permissions"
+title: "19 Permissions"
 date: 2022-01-11T00:07:07+02:00
 description: "Who is allowed to do what on the system?"
 draft: false
 enableToc: false
 enableTocContent: false
 tags:
--
+  - Linux
+  - LPIC1
 series:
--
+  - LPIC1
 categories:
+  - LPIC1
 
 libraries:
 

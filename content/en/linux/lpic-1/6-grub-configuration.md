@@ -6,7 +6,8 @@ draft: false
 enableToc: false
 enableTocContent: false
 tags:
--
+  - Linux
+  - LPIC1
 series:
 -
 categories:
