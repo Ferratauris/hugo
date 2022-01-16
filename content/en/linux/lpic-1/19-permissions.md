@@ -8,10 +8,10 @@ enableTocContent: false
 tags:
   - Linux
   - LPIC1
+
 series:
-  - LPIC1
+
 categories:
-  - LPIC1
 
 libraries:
 
