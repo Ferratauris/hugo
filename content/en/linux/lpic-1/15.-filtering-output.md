@@ -6,10 +6,14 @@ draft: false
 enableToc: false
 enableTocContent: false
 tags:
--
+- Linux
+- LPIC1
+- Courses
+- Linux courses
 series:
--
+- LPIC1
 categories:
+- Linux
 
 libraries:
 
