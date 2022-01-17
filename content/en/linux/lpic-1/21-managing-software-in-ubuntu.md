@@ -1,6 +1,6 @@
 ---
 title: "20 managing software in Ubuntu"
-date: 2022-01-16T17:47:07+02:00
+date: 2022-01-17T21:13:13+02:00
 description: "How can we manage software in Ubuntu?"
 draft: false
 enableToc: false

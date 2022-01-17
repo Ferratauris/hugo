@@ -1,6 +1,6 @@
 ---
 title: "Arch Linux rant"
-date: 2021-12-04T18:22:13+02:00
+date: 2022-01-17T21:13:13+02:00
 description: "Arch Linux is the best operating system"
 draft: false
 enableToc: false
