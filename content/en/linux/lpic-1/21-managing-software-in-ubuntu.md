@@ -1,5 +1,5 @@
 ---
-title: "20 managing software in Ubuntu"
+title: "21 managing software in Ubuntu"
 date: 2022-01-17T21:13:13+02:00
 description: "How can we manage software in Ubuntu?"
 draft: false
@@ -71,7 +71,7 @@ man apt
 We can also search to see if a package actually exists in the repository
 
 ```
-sudo search install mc
+sudo apt search mc
 ```
 
 Let's break that down!
@@ -164,7 +164,7 @@ Use man (Manual) to see other ways apt can be used.
 man apt
 ```
 
-One last thing I need to mention is that one can also point atp to a local file on your storage to have it installed. Or add your own user defined repositories. The instructions are usually listed by the maintainer
+One last thing I need to mention is that one can also point apt to a local file on your storage to have it installed. Or add your own user defined repositories. The instructions are usually listed by the maintainer
 
 For example. the webmin packages are not in the official repository of ubuntu.
 We can add the repository by following the steps listed here:
