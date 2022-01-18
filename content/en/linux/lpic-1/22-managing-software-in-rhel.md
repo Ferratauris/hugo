@@ -1,6 +1,6 @@
 ---
 title: "22 Managing software in RHEL"
-date: 2022-01-17T21:13:13+02:00
+date: 2022-01-18T20:02:13+02:00
 description: "How can we manage software in RHEL (Red Hat Enterprise Linux)?"
 draft: false
 enableToc: false
