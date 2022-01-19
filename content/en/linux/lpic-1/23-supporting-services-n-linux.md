@@ -1,6 +1,6 @@
 ---
 title: "23 Supporting Services In Linux"
-date: 2022-01-18T20:02:13+02:00
+date: 2022-01-19T19:11:11+02:00
 description: "How is Linux initialized?"
 draft: false
 enableToc: false
