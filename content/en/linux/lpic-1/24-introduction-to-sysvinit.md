@@ -1,6 +1,6 @@
 ---
 title: "24 Introduction to sysvinit"
-date: 2022-01-19T19:11:11+02:00
+date: 2022-01-20T19:22:22+02:00
 description: "What exactly is this thing called sysvinit?"
 draft: false
 enableToc: false
