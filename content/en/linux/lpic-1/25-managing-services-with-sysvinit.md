@@ -1,6 +1,6 @@
 ---
 title: "25 Managing services with sysvinit"
-date: 2022-01-20T19:22:22+02:00
+date: 2022-01-22T22:36:22+02:00
 description: "So how can we use sysvinit to manage services?"
 draft: false
 enableToc: false
