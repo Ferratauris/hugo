@@ -1,7 +1,7 @@
 ---
 title: "25 Systemd"
 "
-date: 2022-01-22T22:36:22+02:00
+date: 2022-01-26T19:57:22+02:00
 description: "What exactly is this thing called systemd and how can we use it?"
 draft: false
 enableToc: false
@@ -21,40 +21,40 @@ libraries:
 ---
 
 The biggest reason systemd was developed was to better support dynamic hardware.
-In this day n age we are used to add and remove hardware on the fly, like connecting and disconnecting USB devices.
+In this day and age we are used to adding and removing hardware on the fly, like connecting and disconnecting USB devices.
 
-With the older sysvinit, the system booted from scripts in serie.
-One script ran after another untill all of them was done.
-This meant that if one of the scripts hung, your entire boot process is halted until that gets sorted out.
+With the older sysvinit, the system booted from scripts in series.
+One script ran after another until all of them were done.
+This means that if one of the scripts hangs, your entire boot process is halted until that gets sorted out.
 
-Systemd is a binary. it also runs scripts to initialize your system, but it does it in paralel. which meand a better and faster boot time. 
+Systemd is a binary. it also runs scripts to initialize your system, but it does it in paralel. which means a better and faster boot time. 
 
-To check if your systeme is running systemd, it is as simple as check in in /usr/sbin
-a symlink called init should be there that points to /lib/sytemd/systemd
-This tells you that systemd is the init sytem for your system.
+To check if your system is running systemd, it is as simple as check in in /usr/sbin
+a symlink called init should be there that points to /lib/systemd/systemd
+This tells you that systemd is the init system for your system.
 
 Systemd gets it's configurations from 2 places
 
 The first and default one is /lib/systemd
-These are configurations that is put there by the distrobution itself to get your system up and running.
+These are configurations that are put there by the distribution itself to get your system up and running.
 If we take a look inside this location, we will find targets. The targets are the ones that actually tell your system which services to actually stort and when.
 
-You will also find runlevels that are symlinked to diffeertnt targets to give a little backwards compatibility. For those who still use the old commands.
+You will also find run levels that are symlinked to different targets to give a little backwards compatibility. For those who still use the old commands.
 
 The second location where systemd configuration files are stored is /etc/systemd/system
-In this location, custom overrides gets listed.
+In this location, custom overrides get listed.
 This is where you would put your custom configurations if you want to change the way your system is initialized.
 
 The runlevels are as follows:
 
 poweroff.target(system is not on)
-rescue.target(single user mode. You can use this to reapir a malfunctioning machine)
-multi-user.target(non graphical multiuser envirnoment)
-graphical.target(graphical multiuser envirnoment)
+rescue.target(single user mode. You can use this to repair a malfunctioning machine)
+multi-user.target(non graphical multi user environment)
+graphical.target(graphical multi user environment)
 reboot.target(system is rebooting)
 
 Changing the default target is super simple.
-for example if you want to set the default to multiuser:
+for example if you want to set the default to multi user:
 
 ```
 sudo systemctl set-default multi-user.target
@@ -70,7 +70,7 @@ Use man (Manual) to see other ways systemd can be used.
 man systemd
 ```
 
-But you do not haveto wait until next reboot.
+But you don't have to wait until the next reboot.
 You can also change the runlevel on the fly
 for example if we want to switch to multiuser mode immediately:
 
