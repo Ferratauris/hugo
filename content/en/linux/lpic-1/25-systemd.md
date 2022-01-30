@@ -87,3 +87,61 @@ Use man (Manual) to see other ways systemd can be used.
 ```
 man systemd
 ```
+
+## So how are services managed and installed?
+
+Getting a service to start is pretty easy. Below I will start ssh now and enable it to start at system startup.
+
+```
+sudo systemctl enable --now ssh
+```
+
+Let's break that down!
+
+sudo(substitute user do) systemctl(system control) enable(enable a specified service at boot) --now(start that service immediately) ssh(secure shell, used to remotely log into a system)
+
+Use man (Manual) to see other ways systemd can be used.
+
+```
+man systemd
+```
+
+### It should be noted that replacing enable with disable will have the opposite effect.
+
+### removing the --now string will cause the service to not start immediately but be enabled to start at system bootup
+
+Now below, I will show how to check whether a service is running and enabled on boot.
+
+```
+systemctl status ssh
+```
+
+Let's break that down!
+
+sudo(substitute user do) systemctl(system control) status(Check the status of a specified service) ssh(secure shell, used to remotely log into a system)
+
+Use man (Manual) to see other ways systemd can be used.
+
+```
+man systemd
+```
+
+Next, let's start a service
+
+```
+systemctl status ssh
+```
+
+Let's break that down!
+
+sudo(substitute user do) systemctl(system control) start(start a specified service) ssh(secure shell, used to remotely log into a system)
+
+Use man (Manual) to see other ways systemd can be used.
+
+```
+man systemd
+```
+
+### Please note that stating stop instead of start, the service will stop instead
+
+### To restart a service, simply replace start with restart.
