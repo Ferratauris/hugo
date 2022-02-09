@@ -1,5 +1,5 @@
 ---
-title: "25 Supporting storage devices"
+title: "26 Supporting storage devices"
 "
 date: 2022-01-26T19:57:22+02:00
 description: "What do we do when we want to create a partition on the hard drive?"
