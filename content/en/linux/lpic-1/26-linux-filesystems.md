@@ -69,3 +69,7 @@ BTRFS was developed by Sun microsystems and support:
 * Files upto 8 Exobyte
 * Snapshots
 * Journaling
+
+## OK so how do we create a filesystem?
+
+ 
