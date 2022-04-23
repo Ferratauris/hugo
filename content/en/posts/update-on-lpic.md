@@ -1,6 +1,6 @@
 ---
 title: "Update on LPIC"
-date: 2021-12-04T18:22:13+02:00
+date: 2022-04-22T22:33:13+02:00
 description: "Why have I been so quiet?"
 draft: false
 enableToc: false
