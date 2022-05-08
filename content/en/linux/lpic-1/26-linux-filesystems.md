@@ -1,6 +1,5 @@
 ---
 title: "27 Linux Filesystems"
-"
 date: 2022-01-26T19:57:22+02:00
 description: "What filsystems are there and how do they work?"
 draft: false
