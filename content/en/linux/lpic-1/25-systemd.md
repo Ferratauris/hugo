@@ -26,7 +26,7 @@ With the older sysvinit, the system booted from scripts in series.
 One script ran after another until all of them were done.
 This means that if one of the scripts hangs, your entire boot process is halted until that gets sorted out.
 
-Systemd is a binary. it also runs scripts to initialize your system, but it does it in paralel. which means a better and faster boot time.
+Systemd is a binary. it also runs scripts to initialize your system, but it does it in paralel. which means a better and faster boot time. 
 
 To check if your system is running systemd, it is as simple as check in in /usr/sbin
 a symlink called init should be there that points to /lib/systemd/systemd
@@ -105,7 +105,7 @@ Use man (Manual) to see other ways systemd can be used.
 man systemd
 ```
 
-### It should be noted that replacing enable with disable will have the opposite effect
+### It should be noted that replacing enable with disable will have the opposite effect.
 
 ### removing the --now string will cause the service to not start immediately but be enabled to start at system bootup
 
@@ -143,4 +143,4 @@ man systemd
 
 ### Please note that stating stop instead of start, the service will stop instead
 
-### To restart a service, simply replace start with restart
+### To restart a service, simply replace start with restart.
