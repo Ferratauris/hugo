@@ -1,6 +1,6 @@
 ---
 title: "1 Introduction"
-date: 2021-12-14T22:04:06+02:00
+date: 2022-06-02T21:30:06+02:00
 description: "An overview on what we can expect from the LPIC-1 revised series"
 draft: false
 enableToc: false

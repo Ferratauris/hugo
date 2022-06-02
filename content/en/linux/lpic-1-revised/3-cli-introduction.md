@@ -1,6 +1,6 @@
 ---
 title: "3 CLI Introduction"
-date: 2021-12-14T22:04:06+02:00
+date: 2022-06-02T21:31:06+02:00
 description: "What is CLI"
 draft: false
 enableToc: false
