@@ -1,5 +1,5 @@
 +++
-aliases = ["coding","python"]
+aliases = ["Coding","Python"]
 title = "Python"
 author = "Ferret"
 tags = ["index"]
