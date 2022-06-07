@@ -18,7 +18,7 @@
 
 [[main]]
     name = "Python"
-    url = "/python/"
+    url = "/coding/"
     parent = "Sections"
 
 [[main]]
