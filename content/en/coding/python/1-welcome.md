@@ -182,7 +182,7 @@ Now let's try another!
 
 ```
 print('Hello world!')
-Print('My name is')
+print('My name is')
 print('John Doe')
 ```
 
