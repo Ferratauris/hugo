@@ -133,6 +133,8 @@ Now the software needed should be installed. Wasn't that quick and painless?
 
 We can also make use of wizards and gui package managers. But To me, this is  the most efficient way.
 
+### Folder for our projects
+
 Now stay in your CLI and create a new folder where your coding learning and projects will live
 
 '''
@@ -147,7 +149,7 @@ Now we relocate to that folder.
 cd python
 '''
 
-We make our first program
+### NOW! We make our first program
 
 '''
 code print.py
