@@ -43,27 +43,27 @@ Just open your terminal and type (Package-manager)(install) vscode
 
 ### On Debian derivatives
 
-'''
+```
 sudo apt install vscode 
-'''
+```
 
 ### On Red hat derivatives
 
-'''
+```
 sudo yum install vscode 
-'''
+```
 
 ### On Arch derivatives
 
-'''
+```
 sudo pacman -S  vscode 
-'''
+```
 
 ### On Suse derivatives
 
-'''
+```
 sudo zypper install vscode 
-'''
+```
 
 It really couldn't be easier. You just tell your computer what to do and it does it.
 
@@ -71,15 +71,15 @@ It really couldn't be easier. You just tell your computer what to do and it does
 
 For you apple fans out there! Open a terminal by pressing (Cmd+Shift+P) and run one of these commands
 
-'''
+```
 brew install visual-studio-code
-'''
+```
 
 or
 
-'''
+```
 port install visual-studio-code
-'''
+```
 
 Vscode can also be downloaded from their website for Mac. Follow the link below for more information
 
@@ -112,15 +112,15 @@ Restricted
 
 Run
 
-'''
+```
 Set-ExecutionPolicy AllSigned 
-'''
+```
 
 Then run the following command:
 
-'''
+```
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-'''
+```
 
 Once this is done, We can start with the fun stuffs: using a nix like package manager in Windows
 
@@ -137,31 +137,31 @@ We can also make use of wizards and gui package managers. But To me, this is  t
 
 Now stay in your CLI and create a new folder where your coding learning and projects will live
 
-'''
+```
 mkdir python
-'''
+```
 
 It is important to make little use of spaces and uppercase characters when naming a file or folder as this will just be easier to  work with in the future.
 
 Now we relocate to that folder.
 
-'''
+```
 cd python
-'''
+```
 
 ### NOW! We make our first program
 
-'''
+```
 code print.py
-'''
+```
 
 This will open vscode
 
 Simply type:
 
-'''
+```
 print('Hello World!')
-'''
+```
 
 save!
 
@@ -174,17 +174,17 @@ It should be noted that either single or double quotes.  it is encouraged to us
 
 Let's make another one!
 
-'''
+```
 print('hi')
-'''
+```
 
 Now let's try another!
 
-'''
+```
 print('Hello world!')
 Print('My name is')
 print('John Doe')
-'''
+```
 
 Each print statement will output a whole new line.
 
