@@ -1,6 +1,6 @@
 ---
 title: "1 Welcome"
-date: 2021-12-14T22:04:06+02:00
+date: 2022-06-07T21:58:06+02:00
 description: "What can be expected from the Python series"
 draft: false
 enableToc: false
