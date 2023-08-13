@@ -42,10 +42,8 @@ The root Distros include but are not limited to:
  * Debian (One of the most supported Distros). Distros based on Linux include:
  Sparky Linux
  Linux Mint Debian Edition
- sparky Linux
  SteamOs (The old one)
  Lindows
- Backtrack
  kali
  Raspberry Pi OS
  Tails
@@ -166,6 +164,12 @@ Then identify any hardware that was not detected and installed automatically by 
 
 ## Conclusion
 
-You should now have a fully installed Linux OS of your choice. Updated and ready to go
-This is a simple and straightforward task just like instaling windows.
-Just remember to always read what the screen is saying to avoid any headaches
+What I Need you to take away from this particular article in order is:
+- How to obtain a Linux distro
+- How to create installation media
+- How to boot the installer
+- How to perform an installation
+- How to set up User Accounts
+- How to set up timezones
+- How to configure a Hard drive
+- How to perform system updates 
