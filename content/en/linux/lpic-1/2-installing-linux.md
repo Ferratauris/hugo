@@ -165,11 +165,11 @@ Then identify any hardware that was not detected and installed automatically by 
 ## Conclusion
 
 What I Need you to take away from this particular article in order is:
-- How to obtain a Linux distro
-- How to create installation media
-- How to boot the installer
-- How to perform an installation
-- How to set up User Accounts
-- How to set up timezones
-- How to configure a Hard drive
-- How to perform system updates 
+* How to obtain a Linux distro
+* How to create installation media
+* How to boot the installer
+* How to perform an installation
+* How to set up User Accounts
+* How to set up timezones
+* How to configure a Hard drive
+* How to perform system updates 

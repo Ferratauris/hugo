@@ -32,6 +32,56 @@ The kernel uses a service called dbuss to identify hardware.
 To see what hardware has been installed successfully, we can use a few shell commands.
 (You will also see people call it Bash or terminal commands. The shell runs  the terminal and we interact with the shell. Bash is just  a version of shell. I want you to get into the habit of calling it shell as Bash is just a version of shell.)
 
+### dmesg
+
+One of the most common commands for trouble shooting you can come accross in a Linux server setting is the dmesg (display message/ driver message) command.
+
+```
+dmesg
+```
+Use man (Manual) to see other ways dmesg can be used.
+
+```
+man dmesg
+```
+
+Below is a shoert TLDR
+
+  - Show kernel messages:
+    dmesg
+
+  - Show kernel error messages:
+    dmesg --level err
+
+  - Show kernel messages and keep reading new ones, similar to `tail -f` (available in kernels 3.5.0 and newer):
+    dmesg -w
+
+  - Show how much physical memory is available on this system:
+    dmesg | grep -i memory
+
+  - Show kernel messages 1 page at a time:
+    dmesg | less
+
+  - Show kernel messages with a timestamp (available in kernels 3.5.0 and newer):
+    dmesg -T
+
+  - Show kernel messages in human-readable form (available in kernels 3.5.0 and newer):
+    dmesg -H
+
+  - Colorize output (available in kernels 3.5.0 and newer):
+    dmesg -L
+
+
+The function of dmesg is to print the kernel ring buffer.
+The dmesg command on it's own is not very useful. so what we can do is pipe dmesg into less.
+
+Thoug it might be interesting to slowly read all of the output for dmesg, it's rarily every useful.
+
+A better way would be to grep that output.
+More on this later.
+
+dmesg is commonly used to troubleshoot why a certain device is not working. Like you have a pci error or a ethernet error.
+
 ### lspci
 
 The first command that we are going to learn is lspci.
@@ -45,6 +95,26 @@ Use man (Manual) to see other ways lspci can be used.
 ```
 man lspci
 ```
+Below is a short TLDR
+
+  List all PCI devices.
+  More information: https://manned.org/lspci.
+
+  - Show a brief list of devices:
+    lspci
+
+  - Display additional info:
+    lspci -v
+
+  - Display drivers and modules handling each device:
+    lspci -k
+
+  - Show a specific device:
+    lspci -s 00:18.3
+
+  - Dump info in a readable form:
+    lspci -vm
+
 
 Here is the results if I run lspci
 
@@ -102,6 +172,27 @@ Use man (Manual) to see other ways lsusb can be used.
 man lsusb
 ```
 
+Below is a short TLDR
+
+  Display information about USB buses and devices connected to them.
+  More information: https://manned.org/lsusb.
+
+  - List all the USB devices available:
+    lsusb
+
+  - List the USB hierarchy as a tree:
+    lsusb -t
+
+  - List verbose information about USB devices:
+    lsusb --verbose
+
+  - List detailed information about a USB device:
+    lsusb --verbose -s bus:device number
+
+  - List devices with a specified vendor and product ID only:
+    lsusb -d vendor:product
+
+
 Below are the results if I run lsusb
 
 ```
@@ -137,6 +228,35 @@ Use man (Manual) to see other ways ls can be used.
 ```
 man ls
 ```
+Below is a short TLDR
+
+  List directory contents.
+  More information: https://www.gnu.org/software/coreutils/ls.
+
+  - List files one per line:
+    ls -1
+
+  - List all files, including hidden files:
+    ls -a
+
+  - List all files, with trailing `/` added to directory names:
+    ls -F
+
+  - Long format list (permissions, ownership, size, and modification date) of all files:
+    ls -la
+
+  - Long format list with size displayed using human-readable units (KiB, MiB, GiB):
+    ls -lh
+
+  - Long format list sorted by size (descending):
+    ls -lS
+
+  - Long format list of all files, sorted by modification date (oldest first):
+    ls -ltr
+
+  - Only list directories:
+    ls -d */
+
 
 Here is the output is I should run ls /dev
 
@@ -208,6 +328,15 @@ Use man (Manual) to see other ways lsmod can be used.
 ```
 man lsmod
 ```
+Below is a short TLDR
+
+  Shows the status of Linux kernel modules.
+  See also `modprobe`, which loads kernel modules.
+  More information: https://manned.org/lsmod.
+
+  - List all currently loaded kernel modules:
+    lsmod
+
 
 Here is the output if I run lsmod
 
@@ -341,6 +470,23 @@ Use man (Manual) to see other ways rmmod can be used.
 ```
 man rmmod
 ```
+Below is a short TLDR
+
+  - Remove a module from the kernel:
+    sudo rmmod module_name
+
+  - Remove a module from the kernel and display verbose information:
+    sudo rmmod --verbose module_name
+
+  - Remove a module from the kernel and send errors to syslog instead of `stderr`:
+    sudo rmmod --syslog module_name
+
+  - Display help:
+    rmmod --help
+
+  - Display version:
+    rmmod --version
+
 
 Now first we should go find the module we would want to remove. We could go through the entire list of lsmod to find it or we can have the system do it for us by piping the lsmod into another command. Piping a command just means that we take the output of one command to be the input of another command. This will be explained in greater detail later.
 lsmod | grep bluetooth will look for the word bluetooth inside of the output of the lsmod command and display it
@@ -380,9 +526,33 @@ Use man (Manual) to see other ways modprobe can be used.
 ```
 man modprobe
 ```
+Below is a short TLDR
+
+  - Pretend to load a module into the kernel, but don't actually do it:
+    sudo modprobe --dry-run module_name
+
+  - Load a module into the kernel:
+    sudo modprobe module_name
+
+  - Remove a module from the kernel:
+    sudo modprobe --remove module_name
+
+  - Remove a module and those that depend on it from the kernel:
+    sudo modprobe --remove-dependencies module_name
+
+  - Show a kernel module's dependencies:
+    sudo modprobe --show-depends module_name
+
 
 ## Conclusion
 
-Linux is great at detecting and installing hardware drivers
-There are a few commands to see whether the hardware is connected and the drivers are installed.
-You should be able to detect, install, enable, and disable software from now on.
+What I need you to take away from this article is:
+
+1. How to identify whether hardware had been detected by Linux and how to correct them if necissary.
+
+* Dmesg is used to look at waht the kernel had loaded and troubleshoot harware problems.
+
+* List connected hardware
+** lspci list the pci devices connected to your linux device
+** lsusb is used to list the USB devices connected to your Linux device.
+** Both these commands call /sys
