@@ -54,10 +54,30 @@ Systemd is the very first program that gets run on your PC and always have a pro
 ## Conclusion
 
 You should now be able to identify the boot process.
-To list them again:
+* To list them again:
+** BIOS/UEFI
+** MBR/GPT
+** GRUB
+** initrd/Kernel
+** Systemd
 
-* BIOS/UEFI
-* MBR/GPT
-* GRUB
-* initrd/Kernel
-* Systemd
+* System firmware can be either a BIOS or a UEFI
+
+* Firmware is responsible for initializing the hardware and executing the bootloader
+
+* A boot menu will give you the option to configure the boot order
+
+* The MBR data is stored on the first sector of the hard drive
+
+* GPT maintains multiple copies of the boot data
+
+* GRUB is an open source bootloader.
+It features support for multiple architectures, graphical menus, and recue mode.
+It's menu entries point to operating systems on the disk and kernels.
+
+* The linux kernel is loaded from /boot/vmlinuz followed by the version.
+it is copressed with gzip so it will be decompressed and loaded into RAM.
+
+* Initrd or initramfs initializs the RAM and conataines the basic root file system loaded from /boot/initrd-version or /bot/initramfs-version
+
+*  The kernel launches either sysVinit or systemd

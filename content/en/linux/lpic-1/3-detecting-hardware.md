@@ -556,3 +556,22 @@ What I need you to take away from this article is:
 ** lspci list the pci devices connected to your linux device
 ** lsusb is used to list the USB devices connected to your Linux device.
 ** Both these commands call /sys
+
+* Hardware devices are mapped to files in /dev
+** Udev is the system that maps harware files in /dev, it provides dynamic naming so files represent harware that are actually present.
+** HAL Populates the the files with XML data
+* Dbus enables communication between HAL and the software processes.
+
+* Device mappings can be overridden in /etc/dev/rules.d
+
+* lsmod lists all loaded Linux kernel modules. it does this by calling /proc
+
+* To load modules we use modprobe -v module-ame
+
+* To view info on a kernel module, we use the modinfo module-name command
+
+* To remove a kernel module, we have more than one option
+** Simply remove the driver package
+** add the module to the modprobe blacklist
+** rmmod (This will only teporarily remove the module untill nex reboot)
+

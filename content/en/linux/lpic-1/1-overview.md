@@ -65,4 +65,10 @@ Below is a list of core parts of what this article series will hold
 
 I will attempt to post at least one article a day, explaining in depth all of the above mentioned parts.
 
+### Conclusion
+
+At the end of each article, there will be a conlusion. These are the most importandt parts to remember going into an LPIC exam.
+It will contain only bullet points of the most important things. 
+Essentially, you can even skip the entire article and only read the conclusion.
+
 ### Let's get started.
