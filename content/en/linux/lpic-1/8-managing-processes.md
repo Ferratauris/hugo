@@ -35,6 +35,29 @@ Use man (Manual) to see other ways ps can be used.
 man ps
 ```
 
+Below is a short TLDR 
+  - List all running processes:
+    ps aux
+
+  - List all running processes including the full command string:
+    ps auxww
+
+  - Search for a process that matches a string:
+    ps aux | grep string
+
+  - List all processes of the current user in extra full format:
+    ps --user $(id -u) -F
+
+  - List all processes of the current user as a tree:
+    ps --user $(id -u) f
+
+  - Get the parent PID of a process:
+    ps -o ppid= -p pid
+
+  - Sort processes by memory consumption:
+    ps --sort size
+
+
 Below is an example:
 
 ```
@@ -95,6 +118,18 @@ Use man (Manual) to see other ways pgrep can be used.
 man pgrep
 ```
 
+Below is a short TLDR
+  - Return PIDs of any running processes with a matching command string:
+    pgrep process_name
+
+  - Search for processes including their command-line options:
+    pgrep --full "process_name parameter"
+
+  - Search for processes run by a specific user:
+    pgrep --euid root process_name
+
+
+
 ```
 ░▒▓    ~/b/w/hugo    master ?1  pgrep zsh            ✔  21:51:01  ▓▒░
 32645
@@ -127,6 +162,30 @@ Use man (Manual) to see other ways top can be used.
 ```
 man top
 ```
+
+Below is a short TLDR
+  - Start `top`:
+    top
+
+  - Do not show any idle or zombie processes:
+    top -i
+
+  - Show only processes owned by given user:
+    top -u username
+
+  - Sort processes by a field:
+    top -o field_name
+
+  - Show the individual threads of a given process:
+    top -Hp process_id
+
+  - Show only the processes with the given PID(s), passed as a comma-separated list. (Normally you wouldn't know PIDs off hand. This example picks the PIDs from the process name):
+    top -p $(pgrep -d ',' process_name)
+
+  - Get help about interactive commands:
+    ?
+
+
 
 Once again, I urge you to try it.
 

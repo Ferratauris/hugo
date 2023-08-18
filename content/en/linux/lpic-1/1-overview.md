@@ -67,7 +67,7 @@ I will attempt to post at least one article a day, explaining in depth all of th
 
 ### Conclusion
 
-At the end of each article, there will be a conlusion. These are the most importandt parts to remember going into an LPIC exam.
+At the end of each article, there will be a conclusion. These are the most important parts to remember going into an LPIC exam.
 It will contain only bullet points of the most important things. 
 Essentially, you can even skip the entire article and only read the conclusion.
 

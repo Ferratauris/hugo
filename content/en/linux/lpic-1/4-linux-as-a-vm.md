@@ -39,6 +39,10 @@ In a VM if you look at (ls /dev), You will see a number of devices that don't ac
 ```
 ls /dev
 ```
+
+Let's break this down.
+ls(list) /dev(the directory whose contents we want to list).
+
 ## Optimizing Linux in a VM
 
 ### Proprietary
@@ -67,16 +71,70 @@ On Debian:
 ```
 sudo apt install open-vm-tools
 ```
+
+Let's break this down.
+sudo (substitute user do) apt(aptitude, the package manager for debian based distros) install(install a program) open-vm-tools(the program to be installed).
+
 Use man (Manual) to see other ways sudo can be used.
 
 ```
 man sudo
 ```
+Below is a short TLDR
+
+  - Run a command as the superuser:
+    sudo less /var/log/syslog
+
+  - Edit a file as the superuser with your default editor:
+    sudo --edit /etc/fstab
+
+  - Run a command as another user and/or group:
+    sudo --user=user --group=group id -a
+
+  - Repeat the last command prefixed with `sudo` (only in `bash`, `zsh`, etc.):
+    sudo !!
+
+  - Launch the default shell with superuser privileges and run login-specific files (`.profile`, `.bash_profile`, etc.):
+    sudo --login
+
+  - Launch the default shell with superuser privileges without changing the environment:
+    sudo --shell
+
+  - Launch the default shell as the specified user, loading the user's environment and reading login-specific files (`.profile`, `.bash_profile`, etc.):
+    sudo --login --user=user
+
+  - List the allowed (and forbidden) commands for the invoking user:
+    sudo --list
+
+
 Use man (Manual) to see other ways apt can be used.
 
 ```
 man apt
 ```
+Below is a short TLDR
+
+  - Search for a given package:
+    apt search package
+
+  - Show information for a package:
+    apt show package
+
+  - Install a package, or update it to the latest available version:
+    sudo apt install package
+
+  - Remove a package (using `purge` instead also removes its configuration files):
+    sudo apt remove package
+
+  - Upgrade all installed packages to their newest available versions:
+    sudo apt upgrade
+
+  - List all packages:
+    apt list
+
+  - List installed packages:
+    apt list --installed
+
 
 On Redhat:
 
@@ -84,11 +142,40 @@ On Redhat:
 sudo dnf install open-vm-tools
 ```
 
+Let's break this down.
+sudo (substitute user do) dnf(dandified ).
+
 Use man (Manual) to see other ways dnf can be used.
 
 ```
 man dnf
 ```
+below is a shoert TLDR
+
+  - Upgrade installed packages to the newest available versions:
+    sudo dnf upgrade
+
+  - Search packages via keywords:
+    dnf search keyword1 keyword2 ...
+
+  - Display details about a package:
+    dnf info package
+
+  - Install a new package (use `-y` to confirm all prompts automatically):
+    sudo dnf install package1 package2 ...
+
+  - Remove a package:
+    sudo dnf remove package1 package2 ...
+
+  - List installed packages:
+    dnf list --installed
+
+  - Find which packages provide a given command:
+    dnf provides command
+
+  - View all past operations:
+    dnf history
+
 
 On Arch:
 
@@ -101,6 +188,34 @@ Use man (Manual) to see other ways pacman can be used.
 ```
 man pacman
 ```
+
+Below is a short TLDR
+
+  - Synchronize and update all packages:
+    sudo pacman -Syu
+
+  - Install a new package:
+    sudo pacman -S package_name
+
+  - Remove a package and its dependencies:
+    sudo pacman -Rs package_name
+
+  - Search the database for packages containing a specific file:
+    pacman -F "file_name"
+
+  - List installed packages and versions:
+    pacman -Q
+
+  - List only the explicitly installed packages and versions:
+    pacman -Qe
+
+  - List orphan packages (installed as dependencies but not actually required by any package):
+    pacman -Qtdq
+
+  - Empty the entire pacman cache:
+    sudo pacman -Scc
+
+
 Let's break there commands down now.
 First we call sudo (Substitute User Do).
 This allows us to do actions as a system administrator.
@@ -123,6 +238,33 @@ Use man (Manual) to see other ways systemctl can be used.
 ```
 man systemctl
 ```
+
+Below is a short TLDR
+
+  - Show all running services:
+    systemctl status
+
+  - List failed units:
+    systemctl --failed
+
+  - Start/Stop/Restart/Reload a service:
+    systemctl start|stop|restart|reload unit
+
+  - Show the status of a unit:
+    systemctl status unit
+
+  - Enable/Disable a unit to be started on bootup:
+    systemctl enable|disable unit
+
+  - Mask/Unmask a unit to prevent enablement and manual activation:
+    systemctl mask|unmask unit
+
+  - Reload systemd, scanning for new or changed units:
+    systemctl daemon-reload
+
+  - Check if a unit is enabled:
+    systemctl is-enabled unit
+
 
 ## Some problems that might come up
 

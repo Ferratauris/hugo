@@ -113,23 +113,46 @@ Normally we would only configure the 40_custom file to add more  menu entries
 
 ## Conclusion
 
-Grub allows one to pick between boot options and is also responsible for finding Operating Systems and the boot process.
-The places where we can configure grub is:
+* Grub allows one to pick between boot options and is also responsible for finding Operating Systems and the boot process.
+* Grub stands for Grand Unified Bootloader.
+* Grub is an own source bootloader
 
-/etc/grub.d and /etc/default/grub
+* Grub supports Multiple architectures
+* Grub supports graphical menus
+* Grub offers a rescue mode
+* Grub allows us to configure modules
+
+* The menu entries of grub points to operating systems on the disk and also points to kernels
+
+* Grub is automatically configured once Linux is installed
+* Grub allows for dual boot configurations 
+
+* A manual configuration is needed once a new operating system is added or once a kernel is updated. This is usually handled by the kernel update package.
+
+* To modify grub paramiters, we run
+
+sudoedit /etc/default/grub
+
+* To configure Grub we edit the following
+
+## On Ubuntu 
+
+/boot/grub/grub.cfg
+
+## On RHEL
+
+/boot/grub2/grub.cfg
 
 To compile the change you have made run:
 
 ### On Ubuntu
 
-sudo grub2-mkconfig -o /boot/grub2/grub.cfg
-
-Let's break that down.
-sudo (super user do) grub2-mkconfig (make new grub configuration) -o (output this) /boot/grub2/grub.cfg (Path to send the output to)
+sudo update-grub2
 
 ### On RedHat
 
-sudo update-grub2
+sudo grub2-mkconfig -o /boot/grub2/grub.cfg
 
-Let's break that down.
-sudo (super user do) update-grub2 (update-grub2)
+* To add an OS to grub or make a new menu entry we run
+
+sudoedit /etc/grub.d/40_custom

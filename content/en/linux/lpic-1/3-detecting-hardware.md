@@ -30,66 +30,74 @@ When we use a computer, most of the time, we interact with the software. The ker
 This is called an abstraction layer.
 The kernel uses a service called dbuss to identify hardware.
 To see what hardware has been installed successfully, we can use a few shell commands.
-(You will also see people call it Bash or terminal commands. The shell runs  the terminal and we interact with the shell. Bash is just  a version of shell. I want you to get into the habit of calling it shell as Bash is just a version of shell.)
+(You will also see people call it Bash or terminal commands. The shell runs  the terminal and we interact with the shell. Bash is just  a version of shell. I want you to get into the habit of calling it shell as Bash is just a version of shell.)
 
 ### dmesg
 
-One of the most common commands for trouble shooting you can come accross in a Linux server setting is the dmesg (display message/ driver message) command.
+One of the most common commands for troubleshooting you can come across in a Linux server setting is the dmesg (display message/ driver message) command.
 
 ```
 dmesg
 ```
+
+Let's break this down.
+dmesg (diagnostic messages)
+
 Use man (Manual) to see other ways dmesg can be used.
 
 ```
 man dmesg
 ```
 
-Below is a shoert TLDR
+Below is a short TLDR
 
-  - Show kernel messages:
-    dmesg
+  - Show kernel messages:
+    dmesg
 
-  - Show kernel error messages:
-    dmesg --level err
+  - Show kernel error messages:
+    dmesg --level err
 
-  - Show kernel messages and keep reading new ones, similar to `tail -f` (available in kernels 3.5.0 and newer):
-    dmesg -w
+  - Show kernel messages and keep reading new ones, similar to `tail -f` (available in kernels 3.5.0 and newer):
+    dmesg -w
 
-  - Show how much physical memory is available on this system:
-    dmesg | grep -i memory
+  - Show how much physical memory is available on this system:
+    dmesg | grep -i memory
 
-  - Show kernel messages 1 page at a time:
-    dmesg | less
+  - Show kernel messages 1 page at a time:
+    dmesg | less
 
-  - Show kernel messages with a timestamp (available in kernels 3.5.0 and newer):
-    dmesg -T
+  - Show kernel messages with a timestamp (available in kernels 3.5.0 and newer):
+    dmesg -T
 
-  - Show kernel messages in human-readable form (available in kernels 3.5.0 and newer):
-    dmesg -H
+  - Show kernel messages in human-readable form (available in kernels 3.5.0 and newer):
+    dmesg -H
 
-  - Colorize output (available in kernels 3.5.0 and newer):
-    dmesg -L
+  - Colorize output (available in kernels 3.5.0 and newer):
+    dmesg -L
 
 
 The function of dmesg is to print the kernel ring buffer.
 The dmesg command on it's own is not very useful. so what we can do is pipe dmesg into less.
 
-Thoug it might be interesting to slowly read all of the output for dmesg, it's rarily every useful.
+Though it might be interesting to slowly read all of the output for dmesg, it's rarily every useful.
 
 A better way would be to grep that output.
 More on this later.
 
-dmesg is commonly used to troubleshoot why a certain device is not working. Like you have a pci error or a ethernet error.
+dmesg is commonly used to troubleshoot why a certain device is not working. Like you have a pci error or an ethernet error.
 
 ### lspci
 
 The first command that we are going to learn is lspci.
-this is used to list PCI (peripheral connect interface) devices.
+This is used to list PCI (peripheral connect interface) devices.
 
 ```
 lspci
 ```
+
+Let's break this down.
+lspci (list pci devices).
+
 Use man (Manual) to see other ways lspci can be used.
 
 ```
@@ -97,29 +105,29 @@ man lspci
 ```
 Below is a short TLDR
 
-  List all PCI devices.
-  More information: https://manned.org/lspci.
+  List all PCI devices.
+  More information: https://manned.org/lspci.
 
-  - Show a brief list of devices:
-    lspci
+  - Show a brief list of devices:
+    lspci
 
-  - Display additional info:
-    lspci -v
+  - Display additional info:
+    lspci -v
 
-  - Display drivers and modules handling each device:
-    lspci -k
+  - Display drivers and modules handling each device:
+    lspci -k
 
-  - Show a specific device:
-    lspci -s 00:18.3
+  - Show a specific device:
+    lspci -s 00:18.3
 
-  - Dump info in a readable form:
-    lspci -vm
+  - Dump info in a readable form:
+    lspci -vm
 
 
 Here is the results if I run lspci
 
 ```
-░▒▓    ~  lspci                                         ✔  21:16:01  ▓▒░
+░▒▓    ~  lspci                                          21:16:01  ▓▒░
 00:00.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Raven/Raven2 Root Complex
 00:00.2 IOMMU: Advanced Micro Devices, Inc. [AMD] Raven/Raven2 IOMMU
 00:01.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Family 17h (Models 00h-1fh) PCIe Dummy Host Bridge
@@ -153,7 +161,7 @@ Here is the results if I run lspci
 29:00.6 Audio device: Advanced Micro Devices, Inc. [AMD] Family 17h (Models 10h-1fh) HD Audio Controller
 2a:00.0 SATA controller: Advanced Micro Devices, Inc. [AMD] FCH SATA Controller [AHCI mode] (rev 61)
 
-░▒▓    ~                                                ✔  21:16:05  ▓▒░
+░▒▓    ~                                                 21:16:05  ▓▒░
 ```
 
 If you run lspci and your exact hardware does not show up, this does not mean that your hardware has been installed incorrectly. Alot of the time, a driver is written for multiple pieces of hardware. If you are unsure, it is best to just check and make sure.
@@ -166,6 +174,10 @@ For these, we use lsusb
 ```
 lsusb
 ```
+
+Let's break this down.
+lsusb (list usb devices).
+
 Use man (Manual) to see other ways lsusb can be used.
 
 ```
@@ -174,29 +186,29 @@ man lsusb
 
 Below is a short TLDR
 
-  Display information about USB buses and devices connected to them.
-  More information: https://manned.org/lsusb.
+  Display information about USB buses and devices connected to them.
+  More information: https://manned.org/lsusb.
 
-  - List all the USB devices available:
-    lsusb
+  - List all the USB devices available:
+    lsusb
 
-  - List the USB hierarchy as a tree:
-    lsusb -t
+  - List the USB hierarchy as a tree:
+    lsusb -t
 
-  - List verbose information about USB devices:
-    lsusb --verbose
+  - List verbose information about USB devices:
+    lsusb --verbose
 
-  - List detailed information about a USB device:
-    lsusb --verbose -s bus:device number
+  - List detailed information about a USB device:
+    lsusb --verbose -s bus:device number
 
-  - List devices with a specified vendor and product ID only:
-    lsusb -d vendor:product
+  - List devices with a specified vendor and product ID only:
+    lsusb -d vendor:product
 
 
 Below are the results if I run lsusb
 
 ```
-░▒▓    ~  lsusb                                         ✔  21:24:03  ▓▒░
+░▒▓    ~  lsusb                                          21:24:03  ▓▒░
 Bus 006 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
 Bus 005 Device 003: ID 09da:2690 A4Tech Co., Ltd. REDRAGON Live Camera
 Bus 005 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
@@ -210,7 +222,7 @@ Bus 001 Device 003: ID 258a:0012 HORI CO.,LTD DEGE 101 Optical Gaming Mouse
 Bus 001 Device 002: ID 1b1c:0a3b Corsair Corsair HS60 Surround Adapter
 Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 
-░▒▓    ~                                                ✔  21:24:06  ▓▒░
+░▒▓    ~                                                 21:24:06  ▓▒░
 
 ```
 
@@ -223,6 +235,10 @@ When a system detects a piece of hardware and successfully installs a driver, th
 ```
 ls /dev
 ```
+
+Let's break this down.
+ls (list) /dev (path to directory we want to list).
+
 Use man (Manual) to see other ways ls can be used.
 
 ```
@@ -230,71 +246,71 @@ man ls
 ```
 Below is a short TLDR
 
-  List directory contents.
-  More information: https://www.gnu.org/software/coreutils/ls.
+  List directory contents.
+  More information: https://www.gnu.org/software/coreutils/ls.
 
-  - List files one per line:
-    ls -1
+  - List files one per line:
+    ls -1
 
-  - List all files, including hidden files:
-    ls -a
+  - List all files, including hidden files:
+    ls -a
 
-  - List all files, with trailing `/` added to directory names:
-    ls -F
+  - List all files, with trailing `/` added to directory names:
+    ls -F
 
-  - Long format list (permissions, ownership, size, and modification date) of all files:
-    ls -la
+  - Long format list (permissions, ownership, size, and modification date) of all files:
+    ls -la
 
-  - Long format list with size displayed using human-readable units (KiB, MiB, GiB):
-    ls -lh
+  - Long format list with size displayed using human-readable units (KiB, MiB, GiB):
+    ls -lh
 
-  - Long format list sorted by size (descending):
-    ls -lS
+  - Long format list sorted by size (descending):
+    ls -lS
 
-  - Long format list of all files, sorted by modification date (oldest first):
-    ls -ltr
+  - Long format list of all files, sorted by modification date (oldest first):
+    ls -ltr
 
-  - Only list directories:
-    ls -d */
+  - Only list directories:
+    ls -d */
 
 
 Here is the output is I should run ls /dev
 
 ```
-░▒▓    ~  ls /dev                                       ✔  21:24:06  ▓▒░
-android          hugepages     sdb       tty25  tty53   ttyS23      vcs4
-android2         hwrng         sdb1      tty26  tty54   ttyS24      vcs5
-android3         input         sdc       tty27  tty55   ttyS25      vcs6
-ashmem           kfd           sdc1      tty28  tty56   ttyS26      vcs7
-autofs           kmsg          shm       tty29  tty57   ttyS27      vcsa
-block            kvm           snapshot  tty3   tty58   ttyS28      vcsa1
-bsg              lightnvm      snd       tty30  tty59   ttyS29      vcsa2
-btrfs-control    log           stderr    tty31  tty6    ttyS3       vcsa3
-bus              loop-control  stdin     tty32  tty60   ttyS30      vcsa4
-char             mapper        stdout    tty33  tty61   ttyS31      vcsa5
-console          media0        tpm0      tty34  tty62   ttyS4       vcsa6
-core             mem           tpmrm0    tty35  tty63   ttyS5       vcsa7
-cpu              mqueue        tty       tty36  tty7    ttyS6       vcsu
-cpu_dma_latency  net           tty0      tty37  tty8    ttyS7       vcsu1
-cuse             null          tty1      tty38  tty9    ttyS8       vcsu2
-disk             nvram         tty10     tty39  ttyS0   ttyS9       vcsu3
-dma_heap         port          tty11     tty4   ttyS1   udmabuf     vcsu4
-dri              ppp           tty12     tty40  ttyS10  uhid        vcsu5
-drm_dp_aux0      psaux         tty13     tty41  ttyS11  uinput      vcsu6
-fb0              ptmx          tty14     tty42  ttyS12  urandom     vcsu7
-fd               pts           tty15     tty43  ttyS13  usb         vfio
-full             random        tty16     tty44  ttyS14  userio      vga_arbiter
-fuse             rfkill        tty17     tty45  ttyS15  v4l         vhci
-gpiochip0        rtc           tty18     tty46  ttyS16  vboxdrv     vhost-net
-gpiochip1        rtc0          tty19     tty47  ttyS17  vboxdrvu    vhost-vsock
-hidraw0          sda           tty2      tty48  ttyS18  vboxnetctl  video0
-hidraw1          sda1          tty20     tty49  ttyS19  vboxusb     video1
-hidraw2          sda2          tty21     tty5   ttyS2   vcs         video2
-hidraw3          sda3          tty22     tty50  ttyS20  vcs1        watchdog
-hidraw4          sda4          tty23     tty51  ttyS21  vcs2        watchdog0
-hpet             sda5          tty24     tty52  ttyS22  vcs3        zero
+░▒▓    ~  ls /dev                                        21:24:06  ▓▒░
+android          hugepages     sdb       tty25  tty53   ttyS23      vcs4
+android2         hwrng         sdb1      tty26  tty54   ttyS24      vcs5
+android3         input         sdc       tty27  tty55   ttyS25      vcs6
+ashmem           kfd           sdc1      tty28  tty56   ttyS26      vcs7
+autofs           kmsg          shm       tty29  tty57   ttyS27      vcsa
+block            kvm           snapshot  tty3   tty58   ttyS28      vcsa1
+bsg              lightnvm      snd       tty30  tty59   ttyS29      vcsa2
+btrfs-control    log           stderr    tty31  tty6    ttyS3       vcsa3
+bus              loop-control  stdin     tty32  tty60   ttyS30      vcsa4
+char             mapper        stdout    tty33  tty61   ttyS31      vcsa5
+console          media0        tpm0      tty34  tty62   ttyS4       vcsa6
+core             mem           tpmrm0    tty35  tty63   ttyS5       vcsa7
+cpu              mqueue        tty       tty36  tty7    ttyS6       vcsu
+cpu_dma_latency  net           tty0      tty37  tty8    ttyS7       vcsu1
+cuse             null          tty1      tty38  tty9    ttyS8       vcsu2
+disk             nvram         tty10     tty39  ttyS0   ttyS9       vcsu3
+dma_heap         port          tty11     tty4   ttyS1   udmabuf     vcsu4
+dri              ppp           tty12     tty40  ttyS10  uhid        vcsu5
+drm_dp_aux0      psaux         tty13     tty41  ttyS11  uinput      vcsu6
+fb0              ptmx          tty14     tty42  ttyS12  urandom     vcsu7
+fd               pts           tty15     tty43  ttyS13  usb         vfio
+full             random        tty16     tty44  ttyS14  userio      vga_arbiter
+fuse             rfkill        tty17     tty45  ttyS15  v4l         vhci
+gpiochip0        rtc           tty18     tty46  ttyS16  vboxdrv     vhost-net
+gpiochip1        rtc0          tty19     tty47  ttyS17  vboxdrvu    vhost-vsock
+hidraw0          sda           tty2      tty48  ttyS18  vboxnetctl  video0
+hidraw1          sda1          tty20     tty49  ttyS19  vboxusb     video1
+hidraw2          sda2          tty21     tty5   ttyS2   vcs         video2
+hidraw3          sda3          tty22     tty50  ttyS20  vcs1        watchdog
+hidraw4          sda4          tty23     tty51  ttyS21  vcs2        watchdog0
+hpet             sda5          tty24     tty52  ttyS22  vcs3        zero
 
-░▒▓    ~                                                ✔  21:33:45  ▓▒░
+░▒▓    ~                                                 21:33:45  ▓▒░
 
 ```
 
@@ -323,6 +339,10 @@ It might be that your hardware is connected and detected inside or lspci or lsus
 ```
 lsmod
 ```
+
+Let's break this down.
+lsmod (list modules).
+
 Use man (Manual) to see other ways lsmod can be used.
 
 ```
@@ -330,124 +350,124 @@ man lsmod
 ```
 Below is a short TLDR
 
-  Shows the status of Linux kernel modules.
-  See also `modprobe`, which loads kernel modules.
-  More information: https://manned.org/lsmod.
+  Shows the status of Linux kernel modules.
+  See also `modprobe`, which loads kernel modules.
+  More information: https://manned.org/lsmod.
 
-  - List all currently loaded kernel modules:
-    lsmod
+  - List all currently loaded kernel modules:
+    lsmod
 
 
 Here is the output if I run lsmod
 
 ```
-░▒▓    ~  lsmod                                         ✔  21:58:13  ▓▒░
-Module                  Size  Used by
-snd_seq_dummy          16384  0
-snd_hrtimer            16384  1
-snd_seq                86016  7 snd_seq_dummy
-rfkill                 32768  1
-intel_rapl_msr         20480  0
-intel_rapl_common      28672  1 intel_rapl_msr
-edac_mce_amd           36864  0
-kvm_amd               147456  0
-mousedev               24576  0
-kvm                  1036288  1 kvm_amd
-irqbypass              16384  1 kvm
-amdgpu               7757824  160
-crct10dif_pclmul       16384  1
-crc32_pclmul           16384  0
-ghash_clmulni_intel    16384  0
-btrfs                1638400  0
-wmi_bmof               16384  0
-joydev                 28672  0
-snd_hda_codec_realtek   159744  1
-uvcvideo              118784  0
-aesni_intel           380928  0
-gpu_sched              49152  1 amdgpu
-videobuf2_vmalloc      20480  1 uvcvideo
-snd_hda_codec_generic    98304  1 snd_hda_codec_realtek
-i2c_algo_bit           16384  1 amdgpu
-videobuf2_memops       20480  1 videobuf2_vmalloc
-crypto_simd            16384  1 aesni_intel
-drm_ttm_helper         16384  1 amdgpu
-videobuf2_v4l2         36864  1 uvcvideo
-ledtrig_audio          16384  1 snd_hda_codec_generic
-blake2b_generic        20480  0
-ttm                    86016  2 amdgpu,drm_ttm_helper
-xor                    24576  1 btrfs
-cryptd                 28672  2 crypto_simd,ghash_clmulni_intel
-videobuf2_common       69632  4 videobuf2_vmalloc,videobuf2_v4l2,uvcvideo,videobuf2_memops
-snd_hda_codec_hdmi     73728  1
-rapl                   16384  0
-raid6_pq              122880  1 btrfs
-drm_kms_helper        299008  1 amdgpu
-libcrc32c              16384  1 btrfs
-snd_hda_intel          57344  2
-sp5100_tco             20480  0
-snd_usb_audio         352256  2
-snd_intel_dspcfg       28672  1 snd_hda_intel
-pcspkr                 16384  0
-cec                    69632  1 drm_kms_helper
-k10temp                16384  0
-snd_intel_sdw_acpi     20480  1 snd_intel_dspcfg
-i2c_piix4              28672  0
-agpgart                45056  1 ttm
-snd_usbmidi_lib        45056  1 snd_usb_audio
-usbhid                 65536  0
-snd_hda_codec         172032  4 snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec_realtek
-snd_rawmidi            45056  1 snd_usbmidi_lib
-syscopyarea            16384  1 drm_kms_helper
-sysfillrect            16384  1 drm_kms_helper
-snd_seq_device         16384  2 snd_seq,snd_rawmidi
-r8169                  98304  0
-snd_hda_core          110592  5 snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec,snd_hda_codec_realtek
-sysimgblt              16384  1 drm_kms_helper
-realtek                36864  1
-fb_sys_fops            16384  1 drm_kms_helper
-mdio_devres            16384  1 r8169
-snd_hwdep              16384  2 snd_usb_audio,snd_hda_codec
-ccp                   118784  1 kvm_amd
-libphy                159744  3 r8169,mdio_devres,realtek
-tpm_crb                20480  0
-tpm_tis                16384  0
-tpm_tis_core           28672  1 tpm_tis
-tpm                    86016  3 tpm_tis,tpm_crb,tpm_tis_core
-gpio_amdpt             20480  0
-rng_core               16384  2 ccp,tpm
-video                  57344  0
-mac_hid                16384  0
-pinctrl_amd            32768  0
-gpio_generic           20480  1 gpio_amdpt
-wmi                    36864  1 wmi_bmof
-xpad                   45056  0
-ff_memless             20480  1 xpad
-vboxnetflt             32768  0
-vboxnetadp             28672  0
-vboxdrv               532480  2 vboxnetadp,vboxnetflt
-snd_aloop              36864  1
-snd_pcm               151552  6 snd_hda_codec_hdmi,snd_hda_intel,snd_usb_audio,snd_hda_codec,snd_aloop,snd_hda_core
-snd_timer              45056  4 snd_seq,snd_hrtimer,snd_aloop,snd_pcm
-snd                   114688  26 snd_hda_codec_generic,snd_seq,snd_seq_device,snd_hda_codec_hdmi,snd_hwdep,snd_hda_intel,snd_usb_audio,snd_usbmidi_lib,snd_hda_codec,snd_hda_codec_realtek,snd_timer,snd_aloop,snd_pcm,snd_rawmidi
-soundcore              16384  1 snd
-v4l2loopback_dc        32768  0
-videodev              270336  4 videobuf2_v4l2,v4l2loopback_dc,uvcvideo,videobuf2_common
-mc                     65536  5 videodev,snd_usb_audio,videobuf2_v4l2,uvcvideo,videobuf2_common
-drm                   585728  28 gpu_sched,drm_kms_helper,amdgpu,drm_ttm_helper,ttm
-fuse                  167936  7
-bpf_preload            16384  0
-ip_tables              32768  0
-x_tables               53248  1 ip_tables
-ext4                  921600  2
-crc32c_generic         16384  0
-crc16                  16384  1 ext4
-mbcache                16384  1 ext4
-jbd2                  163840  1 ext4
-xhci_pci               20480  0
-crc32c_intel           24576  5
-xhci_pci_renesas       20480  1 xhci_pci
+░▒▓    ~  lsmod                                          21:58:13  ▓▒░
+Module                  Size  Used by
+snd_seq_dummy          16384  0
+snd_hrtimer            16384  1
+snd_seq                86016  7 snd_seq_dummy
+rfkill                 32768  1
+intel_rapl_msr         20480  0
+intel_rapl_common      28672  1 intel_rapl_msr
+edac_mce_amd           36864  0
+kvm_amd               147456  0
+mousedev               24576  0
+kvm                  1036288  1 kvm_amd
+irqbypass              16384  1 kvm
+amdgpu               7757824  160
+crct10dif_pclmul       16384  1
+crc32_pclmul           16384  0
+ghash_clmulni_intel    16384  0
+btrfs                1638400  0
+wmi_bmof               16384  0
+joydev                 28672  0
+snd_hda_codec_realtek   159744  1
+uvcvideo              118784  0
+aesni_intel           380928  0
+gpu_sched              49152  1 amdgpu
+videobuf2_vmalloc      20480  1 uvcvideo
+snd_hda_codec_generic    98304  1 snd_hda_codec_realtek
+i2c_algo_bit           16384  1 amdgpu
+videobuf2_memops       20480  1 videobuf2_vmalloc
+crypto_simd            16384  1 aesni_intel
+drm_ttm_helper         16384  1 amdgpu
+videobuf2_v4l2         36864  1 uvcvideo
+ledtrig_audio          16384  1 snd_hda_codec_generic
+blake2b_generic        20480  0
+ttm                    86016  2 amdgpu,drm_ttm_helper
+xor                    24576  1 btrfs
+cryptd                 28672  2 crypto_simd,ghash_clmulni_intel
+videobuf2_common       69632  4 videobuf2_vmalloc,videobuf2_v4l2,uvcvideo,videobuf2_memops
+snd_hda_codec_hdmi     73728  1
+rapl                   16384  0
+raid6_pq              122880  1 btrfs
+drm_kms_helper        299008  1 amdgpu
+libcrc32c              16384  1 btrfs
+snd_hda_intel          57344  2
+sp5100_tco             20480  0
+snd_usb_audio         352256  2
+snd_intel_dspcfg       28672  1 snd_hda_intel
+pcspkr                 16384  0
+cec                    69632  1 drm_kms_helper
+k10temp                16384  0
+snd_intel_sdw_acpi     20480  1 snd_intel_dspcfg
+i2c_piix4              28672  0
+agpgart                45056  1 ttm
+snd_usbmidi_lib        45056  1 snd_usb_audio
+usbhid                 65536  0
+snd_hda_codec         172032  4 snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec_realtek
+snd_rawmidi            45056  1 snd_usbmidi_lib
+syscopyarea            16384  1 drm_kms_helper
+sysfillrect            16384  1 drm_kms_helper
+snd_seq_device         16384  2 snd_seq,snd_rawmidi
+r8169                  98304  0
+snd_hda_core          110592  5 snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec,snd_hda_codec_realtek
+sysimgblt              16384  1 drm_kms_helper
+realtek                36864  1
+fb_sys_fops            16384  1 drm_kms_helper
+mdio_devres            16384  1 r8169
+snd_hwdep              16384  2 snd_usb_audio,snd_hda_codec
+ccp                   118784  1 kvm_amd
+libphy                159744  3 r8169,mdio_devres,realtek
+tpm_crb                20480  0
+tpm_tis                16384  0
+tpm_tis_core           28672  1 tpm_tis
+tpm                    86016  3 tpm_tis,tpm_crb,tpm_tis_core
+gpio_amdpt             20480  0
+rng_core               16384  2 ccp,tpm
+video                  57344  0
+mac_hid                16384  0
+pinctrl_amd            32768  0
+gpio_generic           20480  1 gpio_amdpt
+wmi                    36864  1 wmi_bmof
+xpad                   45056  0
+ff_memless             20480  1 xpad
+vboxnetflt             32768  0
+vboxnetadp             28672  0
+vboxdrv               532480  2 vboxnetadp,vboxnetflt
+snd_aloop              36864  1
+snd_pcm               151552  6 snd_hda_codec_hdmi,snd_hda_intel,snd_usb_audio,snd_hda_codec,snd_aloop,snd_hda_core
+snd_timer              45056  4 snd_seq,snd_hrtimer,snd_aloop,snd_pcm
+snd                   114688  26 snd_hda_codec_generic,snd_seq,snd_seq_device,snd_hda_codec_hdmi,snd_hwdep,snd_hda_intel,snd_usb_audio,snd_usbmidi_lib,snd_hda_codec,snd_hda_codec_realtek,snd_timer,snd_aloop,snd_pcm,snd_rawmidi
+soundcore              16384  1 snd
+v4l2loopback_dc        32768  0
+videodev              270336  4 videobuf2_v4l2,v4l2loopback_dc,uvcvideo,videobuf2_common
+mc                     65536  5 videodev,snd_usb_audio,videobuf2_v4l2,uvcvideo,videobuf2_common
+drm                   585728  28 gpu_sched,drm_kms_helper,amdgpu,drm_ttm_helper,ttm
+fuse                  167936  7
+bpf_preload            16384  0
+ip_tables              32768  0
+x_tables               53248  1 ip_tables
+ext4                  921600  2
+crc32c_generic         16384  0
+crc16                  16384  1 ext4
+mbcache                16384  1 ext4
+jbd2                  163840  1 ext4
+xhci_pci               20480  0
+crc32c_intel           24576  5
+xhci_pci_renesas       20480  1 xhci_pci
 
-░▒▓    ~                                                ✔  21:58:16  ▓▒░
+░▒▓    ~                                                 21:58:16  ▓▒░
 ```
 If a module for a piece of hardware is not showing up, it will not work.
 
@@ -465,6 +485,10 @@ In this case, we would use rmmod (Remove Module)
 ```
 rmmod
 ```
+
+Let's break this down.
+rmmod (remove module).
+
 Use man (Manual) to see other ways rmmod can be used.
 
 ```
@@ -472,20 +496,20 @@ man rmmod
 ```
 Below is a short TLDR
 
-  - Remove a module from the kernel:
-    sudo rmmod module_name
+  - Remove a module from the kernel:
+    sudo rmmod module_name
 
-  - Remove a module from the kernel and display verbose information:
-    sudo rmmod --verbose module_name
+  - Remove a module from the kernel and display verbose information:
+    sudo rmmod --verbose module_name
 
-  - Remove a module from the kernel and send errors to syslog instead of `stderr`:
-    sudo rmmod --syslog module_name
+  - Remove a module from the kernel and send errors to syslog instead of `stderr`:
+    sudo rmmod --syslog module_name
 
-  - Display help:
-    rmmod --help
+  - Display help:
+    rmmod --help
 
-  - Display version:
-    rmmod --version
+  - Display version:
+    rmmod --version
 
 
 Now first we should go find the module we would want to remove. We could go through the entire list of lsmod to find it or we can have the system do it for us by piping the lsmod into another command. Piping a command just means that we take the output of one command to be the input of another command. This will be explained in greater detail later.
@@ -495,12 +519,16 @@ lsmod | grep bluetooth will look for the word bluetooth inside of the output of 
 lsmod | grep bluetooth
 ```
 
+Let's break this down.
+lsmod(list modules) |(take the output of this command and use it as input for the next command) grep(global regular expression print) bluetooth (the global expression to print).
+
+
 Here is my output for lsmod | grep bluetooth
 
 ```
-░▒▓    ~  lsmod | grep bluetooth                        ✔  22:16:28  ▓▒░
+░▒▓    ~  lsmod | grep bluetooth                         22:16:28  ▓▒░
 
-░▒▓    ~                                            0|1 ✘  22:16:30  ▓▒░
+░▒▓    ~                                            0|1 ✘  22:16:30  ▓▒░
 
 ```
 As you can clearly see, I have no bluetooth modules connected to my computer but if there were, I could run rmmod bluetooth to remove this module.
@@ -521,6 +549,9 @@ To reload modules, we use modprobe
 modprobe
 ```
 
+Let's break this down.
+modprobe (module probe).
+
 Use man (Manual) to see other ways modprobe can be used.
 
 ```
@@ -528,29 +559,29 @@ man modprobe
 ```
 Below is a short TLDR
 
-  - Pretend to load a module into the kernel, but don't actually do it:
-    sudo modprobe --dry-run module_name
+  - Pretend to load a module into the kernel, but don't actually do it:
+    sudo modprobe --dry-run module_name
 
-  - Load a module into the kernel:
-    sudo modprobe module_name
+  - Load a module into the kernel:
+    sudo modprobe module_name
 
-  - Remove a module from the kernel:
-    sudo modprobe --remove module_name
+  - Remove a module from the kernel:
+    sudo modprobe --remove module_name
 
-  - Remove a module and those that depend on it from the kernel:
-    sudo modprobe --remove-dependencies module_name
+  - Remove a module and those that depend on it from the kernel:
+    sudo modprobe --remove-dependencies module_name
 
-  - Show a kernel module's dependencies:
-    sudo modprobe --show-depends module_name
+  - Show a kernel module's dependencies:
+    sudo modprobe --show-depends module_name
 
 
 ## Conclusion
 
 What I need you to take away from this article is:
 
-1. How to identify whether hardware had been detected by Linux and how to correct them if necissary.
+1. How to identify whether hardware had been detected by Linux and how to correct them if necessary.
 
-* Dmesg is used to look at waht the kernel had loaded and troubleshoot harware problems.
+* Dmesg is used to look at what the kernel has loaded and troubleshoot hardware problems.
 
 * List connected hardware
 ** lspci list the pci devices connected to your linux device
@@ -558,7 +589,7 @@ What I need you to take away from this article is:
 ** Both these commands call /sys
 
 * Hardware devices are mapped to files in /dev
-** Udev is the system that maps harware files in /dev, it provides dynamic naming so files represent harware that are actually present.
+** Udev is the system that maps hardware files in /dev, it provides dynamic naming so files represent hardware that are actually present.
 ** HAL Populates the the files with XML data
 * Dbus enables communication between HAL and the software processes.
 
@@ -573,5 +604,4 @@ What I need you to take away from this article is:
 * To remove a kernel module, we have more than one option
 ** Simply remove the driver package
 ** add the module to the modprobe blacklist
-** rmmod (This will only teporarily remove the module untill nex reboot)
-
+** rmmod (This will only temporarily remove the module until next reboot)
