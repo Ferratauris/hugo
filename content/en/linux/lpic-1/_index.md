@@ -1,7 +1,7 @@
 +++
-aliases = ["Linux","LPIC-1"]
-title = "lpic-1"
+aliases = ["posts","articles","blog","showcase","docs","linux","courses","lpic-1"]
+title = "Linux"
 author = "Ferret"
 tags = ["index"]
-description = "lpic-1"
+description = "Linux"
 +++
