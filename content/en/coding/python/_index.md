@@ -1,7 +1,7 @@
 +++
 aliases = ["Coding","Python"]
-title = "Python"
+title = "python"
 author = "Ferret"
 tags = ["index"]
-description = "Python"
+description = "python"
 +++
