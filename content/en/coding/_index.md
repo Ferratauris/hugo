@@ -3,5 +3,5 @@ aliases = ["Coding"]
 title = "coding"
 author = "Ferret"
 tags = ["index"]
-description = "Coding"
+description = "coding"
 +++
