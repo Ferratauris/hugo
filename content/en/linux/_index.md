@@ -1,6 +1,6 @@
 +++
 aliases = ["Linux"]
-title = "Linux"
+title = "linux"
 author = "Ferret"
 tags = ["index"]
 description = "Linux"

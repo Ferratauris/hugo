@@ -1,6 +1,6 @@
 +++
 aliases = ["Coding"]
-title = "Coding"
+title = "coding"
 author = "Ferret"
 tags = ["index"]
 description = "Coding"
