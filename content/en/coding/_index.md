@@ -1,7 +1,7 @@
 +++
-aliases = ["posts","articles","blog","showcase","docs","webhosting"]
-title = "coding"
+aliases = ["Coding"]
+title = "Coding"
 author = "Ferret"
 tags = ["index"]
-description = "coding"
+description = "Coding"
 +++
